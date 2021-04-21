@@ -25,8 +25,9 @@ console.log(typeof javascriptIsFun); //string<--boolean
 let year;
 console.log(year); //undefined
 console.log(typeof year); //undefined
+
 //But typeof null shows as object -- A BUG in JS
-console.log(typeof null);
+console.log(typeof null); //object
 
 //Redefining the year
 year = 2021;
