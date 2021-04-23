@@ -32,8 +32,11 @@ console.log(typeof null); //object
 
 //Redefining the year
 year = 2021;
-// console.log(year);
-console.log(typeof year); //number
+//console.log(typeof year); //number
+var yearDataType = typeof year;
+console.log(
+  'Current year is: ' + year + ' and its datatype is a ' + yearDataType
+);
 
 //Assignment 1 ✅
 var country = 'India';
