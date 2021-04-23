@@ -1,5 +1,6 @@
+//JavaScript Fundamentals – Part 1
 let user = 'Smit';
-// if (user === 'Smit') alert('Welcome to the Fight Club!!!');
+if (user === 'Smit') alert('Welcome to the Fight Club!!!');
 console.log(40 + 8 + 23 + 47 - 89);
 let firstName = 'Messi';
 
@@ -33,3 +34,11 @@ console.log(typeof null); //object
 year = 2021;
 // console.log(year);
 console.log(typeof year); //number
+
+//Assignment 1 ✅
+var country = 'India';
+var contient = 'Asia';
+var population = 1390901395;
+console.log('My Country name is :', country);
+console.log('India comes under ' + contient);
+console.log('Population of ' + country + ' is: ' + population);
