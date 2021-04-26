@@ -2,7 +2,6 @@
 let user = 'Smit';
 //if (user === 'Smit') alert('Welcome to the Fight Club!!!');
 console.log(40 + 8 + 23 + 47 - 89);
-let firstName = 'Messi';
 
 //Boolean
 let javascriptIsFun = true;
@@ -106,6 +105,7 @@ if (inEurope) {
 //----------------------------------------------------------------------------------------
 
 //*Basic Operators
+//----Math Operators----
 let currentYear = 2021;
 const ageOfSmit = currentYear - 2000;
 const ageOfDeep = currentYear - 1998;
@@ -119,3 +119,52 @@ console.log(
 const powerNumber = 2 ** 3;
 console.log(powerNumber);
 //2 * 2 * 2 (since power 3)
+
+//Concatinating Strings
+const firstName = 'Smit';
+const lastName = 'Desai';
+console.log(firstName + lastName); //SmitDesai
+console.log(firstName + ' ' + lastName); //Smit Desai
+
+//----Assignment Operators----
+let x = 10 + 5;
+console.log(x); //15
+//*Here we do actually have 2 operators the '+'  and '='
+//*THE x will be assigned to 15
+//!as + operator is executed first before = the assignment operator
+//! ALways do all the math first and then comparison and assignment
+
+x += 10; // x = x + 10
+console.log(x); //25
+
+x *= 4; //x*4
+console.log(x); //100
+
+x /= 2; //x/2
+console.log(x); //50
+
+x++; //x+1
+console.log(x); //51
+
+x--; //x+1
+console.log(x); //50
+
+//----Comparison Operators----
+//We use this to produce boolean values
+console.log(ageOfSmit > ageOfDeep); //false
+
+//or
+console.log(year - 2000 > year - 1998); //false - since smit is younger(less) than deep
+//*How does JS knows what to do first the math or the comparision
+//Actully It doesnt go from left to right
+//! Always do all the math first and then comparison and assignment
+// 1. year-2000 2.year-1998 and then 3. comparison b/w them
+
+console.log(ageOfSmit >= 18); //true - should be atleast 18 years old
+//atleast -- kam se kam 18 or more allowed
+
+//*You can type all this is in console too as because the console actually
+//has access to all the variables that is running in the current browser tab
+
+//But we store this in a const if it's needed later
+const isFullAge = ageOfSmit >= 18; //boolean - true
