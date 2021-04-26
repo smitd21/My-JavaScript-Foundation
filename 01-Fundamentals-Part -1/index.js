@@ -1,6 +1,6 @@
 //JavaScript Fundamentals – Part 1
 let user = 'Smit';
-if (user === 'Smit') alert('Welcome to the Fight Club!!!');
+//if (user === 'Smit') alert('Welcome to the Fight Club!!!');
 console.log(40 + 8 + 23 + 47 - 89);
 let firstName = 'Messi';
 
@@ -106,3 +106,16 @@ if (inEurope) {
 //----------------------------------------------------------------------------------------
 
 //*Basic Operators
+let currentYear = 2021;
+const ageOfSmit = currentYear - 2000;
+const ageOfDeep = currentYear - 1998;
+console.log(
+  'Smits & Deeps age is',
+  +ageOfSmit,
+  ageOfDeep + ' respectively in ',
+  year
+);
+
+const powerNumber = 2 ** 3;
+console.log(powerNumber);
+//2 * 2 * 2 (since power 3)
