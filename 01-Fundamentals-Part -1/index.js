@@ -37,9 +37,9 @@ console.log(
 );
 
 //Assignment 1 ✅
-var country = 'India';
-var contient = 'Asia';
-var population = 139;
+let country = 'India';
+let contient = 'Asia';
+let population = 139;
 console.log('My Country name is :', country);
 console.log('India comes under ' + contient);
 console.log('Population of ' + country + ' is: ' + population);
@@ -87,7 +87,7 @@ console.log(typeof isIsland); //boolean
 console.log(typeof language); //undefined
 //*redefining your lets
 isIsland = 'Maldives';
-language = 'Gujarati';
+language = 'Hindi';
 console.log(
   'My favourite island to go to is ' + isIsland + ' and I speak ' + language
 );
@@ -168,3 +168,50 @@ console.log(ageOfSmit >= 18); //true - should be atleast 18 years old
 
 //But we store this in a const if it's needed later
 const isFullAge = ageOfSmit >= 18; //boolean - true
+
+//Assignment 3 ✅
+population /= 2;
+console.log(
+  'If population is split in half, each half would contain ' +
+    population +
+    ' million number of people in each half'
+);
+population++; //or population+=1
+console.log('Population of my country now is', population);
+
+let finlandPopulation = 6;
+const ifPopulationGreaterThanFinland = population >= finlandPopulation;
+console.log(ifPopulationGreaterThanFinland); //true - it is greater
+difference = population - finlandPopulation;
+
+if (ifPopulationGreaterThanFinland) {
+  console.log(
+    'Yes My country population is much greater than Finland by ' +
+      difference +
+      ' million'
+  );
+} else {
+  console.log('Finland has the grater population');
+}
+
+const avgPopulation = 33;
+if (population >= avgPopulation) {
+  console.log('My country is Averagely Popluated');
+} else {
+  console.log('Below Average');
+}
+if (finlandPopulation >= avgPopulation) {
+  console.log('Finland is Averagely Popluated');
+} else {
+  console.log('Finland is Below Average');
+}
+
+let description =
+  country +
+  ' is in ' +
+  contient +
+  ' and its ' +
+  population * 2 +
+  ' million people speak ' +
+  language;
+console.log(description);
