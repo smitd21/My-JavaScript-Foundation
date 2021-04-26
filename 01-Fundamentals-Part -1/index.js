@@ -215,3 +215,29 @@ let description =
   ' million people speak ' +
   language;
 console.log(description);
+//----------------------------------------------------------------------------------------
+
+//Operator Precedence
+//* WHY in JS the MATH operators occurs first before the COMPARISION operator
+//*because JS has a well-defined order of operator precedence.
+//! So from MDN Operator precedence table we got to know that
+//! usually all the math operators(14) come above the comparision(12) operators
+//that's whyy math occurs first
+//also you can check fot others too there are many many more in the this table
+//for eg: type of, await, etc also comes in here
+
+//---left-to-right
+console.log(25 - 10 - 5);
+
+// Assignment operator has least precedence
+//---right to left coz subtraction(math) will occur first and then the assignment
+let a, b;
+a = b = 25 - 5 - 1;
+//a = b = 19 Here also right to left (coz if left to right a=b but be undefined at that time)
+console.log(a, b); //19,19
+//coz when the ass operator will take place at the end  after math it'll be a=b=19
+
+//Highest precedence one with parentheses - like in math
+
+const averageAge = (ageOfSmit + ageOfDeep) / 2;
+console.log(averageAge); //(21+23)/2 = 22
