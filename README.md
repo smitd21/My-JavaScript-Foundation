@@ -8,6 +8,8 @@ Here I'll be practising JavaScript right from basics to expertise
 - [Mapty](https://mapty.netlify.app/) (OOP, Geolocation, Project planning)
 - [forkify](https://forkify-v2.netlify.app/) (Final advanced project)
 
+## FAQ
+
 I want to put these projects in my portfolio. Is that allowed?
 
 **A:** Absolutely! Just make sure you actually built them yourself by following my github repo, and that you understand what you did. What is **not allowed** is that you create your own course/videos/articles based on my github content!
