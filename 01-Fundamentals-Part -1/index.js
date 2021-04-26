@@ -241,3 +241,24 @@ console.log(a, b); //19,19
 
 const averageAge = (ageOfSmit + ageOfDeep) / 2;
 console.log(averageAge); //(21+23)/2 = 22
+
+let massMark, heightMark;
+let massJohn, heightJohn;
+// massMark = 78;
+// heightMark = 1.69;
+// massJohn = 92;
+// heightJohn = 1.95;
+massMark = 95;
+heightMark = 1.88;
+massJohn = 85;
+heightJohn = 1.76;
+
+var markBmi = massMark / heightMark ** 2;
+var johnBmi = massJohn / heightJohn ** 2;
+console.log(markBmi, johnBmi);
+let markHigherBmi = markBmi > johnBmi;
+if (markHigherBmi) {
+  console.log('Mark has a HIGHER BMI');
+} else {
+  console.log('John has a HIGHER BMI');
+}
