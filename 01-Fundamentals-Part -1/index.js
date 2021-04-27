@@ -193,19 +193,22 @@ if (ifPopulationGreaterThanFinland) {
 } else {
   console.log('Finland has the grater population');
 }
-
+//Assignment 5 ✅
 const avgPopulation = 33;
-if (population >= avgPopulation) {
+var ifAvgPopulation = population >= avgPopulation;
+if (ifAvgPopulation) {
   console.log('My country is Averagely Popluated');
 } else {
   console.log('Below Average');
 }
+
 if (finlandPopulation >= avgPopulation) {
   console.log('Finland is Averagely Popluated');
 } else {
   console.log('Finland is Below Average');
 }
 
+//
 let description =
   country +
   ' is in ' +
@@ -305,4 +308,43 @@ lines');
 console.log(`String with 
 multiple
 lines`);
-//* This will be immensely useful when we start building HTML from JavaScript to create multi lines html elements
+// This will be immensely useful when we start building HTML from JavaScript to create multi lines html elements
+
+//----------------------------------------------------------------------------------------
+
+//* Taking Decisions :
+//if/else control structure - cuz some block will execute and some will not
+
+minAge = 18;
+yourAge = 15;
+
+var isOldEnough = yourAge >= minAge;
+
+if (isOldEnough) {
+  console.log(`Get your driver's license!`);
+} else {
+  console.log(
+    `You are under age, you have to come after ${
+      minAge - yourAge
+    } years sorry :((`
+  );
+}
+
+const myBirthYear = 2000; //20th century getting overr
+let century;
+/*
+1901 -2000 20th
+2001 - 2099 -> 21st 
+>2100 - 22nd
+*/
+
+if (myBirthYear <= 2100 && myBirthYear > 2000) {
+  century = 21;
+  console.log(`Belongs to ${century}st century!`);
+} else if (myBirthYear <= 2000 && myBirthYear > 1900) {
+  century = 20;
+  console.log(`Belongs to ${century}th century!`);
+} else {
+  century = 22;
+  console.log(`Belongs to ${century}nd century!`);
+}
