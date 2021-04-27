@@ -557,4 +557,15 @@ if (hasDriverLicense && hasGoodVision) {
   }
 }
 */
+//Assignment 8 ✅
+var stayCountry = 'Portugal';
+var ifLanguage = 'english';
+var ifPopulation = 40;
+var isThatIsland = false;
+if (ifLanguage === 'english' && ifPopulation < 50 && !isThatIsland) {
+  console.log(`You should live in ${stayCountry} :))`);
+} else {
+  console.log(`${stayCountry} does not meet your criteria`);
+}
+
 //----------------------------------------------------------------------------------------
