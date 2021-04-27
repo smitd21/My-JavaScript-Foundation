@@ -569,3 +569,36 @@ if (ifLanguage === 'english' && ifPopulation < 50 && !isThatIsland) {
 }
 
 //----------------------------------------------------------------------------------------
+
+//Coding Challenge #3 ✅
+
+//Dolphins & Koalas
+const dolphinAvgScore = (97 + 112 + 101) / 3;
+const koalasAvgScore = (109 + 95 + 106) / 3;
+//Higher than the other team as well as avg score should be greater than 100 then the TEAM WINS
+if (dolphinAvgScore > koalasAvgScore && dolphinAvgScore >= 100) {
+  console.log(`Dolphin's: ${dolphinAvgScore} > Koala's : ${koalasAvgScore}`);
+  console.log(`Dolphins WONNN !!!`);
+} else if (dolphinAvgScore < koalasAvgScore && koalasAvgScore >= 100) {
+  console.log(`Dolphin's: ${dolphinAvgScore} < Koala's : ${koalasAvgScore}`);
+  console.log('Koalas WONNNN !!!');
+} else if (
+  dolphinAvgScore === koalasAvgScore &&
+  dolphinAvgScore >= 100 &&
+  koalasAvgScore >= 100
+) {
+  console.log(`Dolphin's: ${dolphinAvgScore} = Koala's : ${koalasAvgScore}`);
+  console.log(`Match Draww BOTH Team's won !!!`);
+} else if (
+  dolphinAvgScore === koalasAvgScore &&
+  dolphinAvgScore < 100 &&
+  koalasAvgScore < 100
+) {
+  console.log(`Dolphin's: ${dolphinAvgScore} = Koala's : ${koalasAvgScore}`);
+  console.log(
+    'No results due to SAME low average scores of both the teams !!!'
+  );
+} else if (dolphinAvgScore < 100 && koalasAvgScore < 100) {
+  console.log(`Dolphin's: ${dolphinAvgScore} = Koala's : ${koalasAvgScore}`);
+  console.log('No results due to low average scores of both the teams !!!');
+}
