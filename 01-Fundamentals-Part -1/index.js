@@ -215,11 +215,19 @@ let description =
   ' million people speak ' +
   language;
 console.log(description);
+
+//Assignment 4 ✅
+//Using Template Literals -- ES6 Feature
+let newDescription = `${country} is in ${contient} and its ${
+  population * 2
+} million people speak ${language} !!`;
+console.log(newDescription);
 //----------------------------------------------------------------------------------------
 
-//Operator Precedence
-//* WHY in JS the MATH operators occurs first before the COMPARISION operator
-//*because JS has a well-defined order of operator precedence.
+// *Operator Precedence
+
+// WHY in JS the MATH operators occurs first before the COMPARISION operator
+//because JS has a well-defined order of operator precedence.
 //! So from MDN Operator precedence table we got to know that
 //! usually all the math operators(14) come above the comparision(12) operators
 //that's whyy math occurs first
@@ -262,3 +270,39 @@ if (markHigherBmi) {
 } else {
   console.log('John has a HIGHER BMI');
 }
+//----------------------------------------------------------------------------------------
+
+//* STRINGS AND TEMPLATE LITERALS
+
+const job = 'Front-end Web Developer';
+const birthYear = '2000';
+
+const smit =
+  "I'm " +
+  firstName +
+  ', A ' +
+  job +
+  " and I'm " +
+  (currentYear - birthYear) +
+  ' years old !!!';
+
+console.log(smit);
+
+//*Using Template Literals -- ES6 Feature
+
+const smitNew = `I'm ${firstName}, A ${job} and I'm ${
+  currentYear - birthYear
+} years old !!!`;
+console.log(smitNew);
+
+//Going to next line earlier how we use to do...
+
+console.log('String with \n\
+multiple \n\
+lines');
+
+//Using Template Literals -- you just have to press enter
+console.log(`String with 
+multiple
+lines`);
+//* This will be immensely useful when we start building HTML from JavaScript to create multi lines html elements
