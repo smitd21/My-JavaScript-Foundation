@@ -466,3 +466,30 @@ if (height) {
   console.log('Height is undefined :((');
 }
 //Height is undefined :((.  --> coz height is undefined (at the beginning) and that's falsy
+
+//* Equality Operators == vs ===
+//! == doesn't check for datatype === do check for data type too
+//! ALWAYS USE ===
+
+// '18' == 18 true           => FYI  == performs string coercion
+// '18' === 18 false        => FYI  === doen't perform string coercion
+
+const age = '18';
+if (age === 18) console.log('You just became an adult(strict) ;))'); //false
+if (age == 18) console.log('You just became an adult(loose) ;))'); //true
+
+//const secretKey = prompt('Enter Secret Key');  // Prompt will take everything be default a STRING
+//so first convert it into number
+const secretKey = Number(prompt('Enter Secret Key'));
+if (secretKey === 2107) {
+  alert('You are Welcome Smit Sir !!');
+  console.log('Cool !! Valid Number', secretKey, typeof secretKey); // 2107 "number"
+} else if (secretKey === 0) {
+  alert('Field Required to enter the partayyy!!!');
+  console.log('You need to reload and Try again!!');
+} else {
+  alert('Please enter valid Secret key fucker...');
+  console.log('Invalid Key Try Again!!', secretKey, typeof secretKey);
+}
+//Another way
+if (secretKey !== 2107) console.log('Why not 2107 ?');
