@@ -448,7 +448,7 @@ console.log(Boolean(NaN));
 
 //and everything else is truthy
 console.log(Boolean('Smit')); //true
-console.log(Boolean({})); //true (empty string gives true not empty bracket it give true onlyy)
+console.log(Boolean({})); //true (empty string gives false not empty bracket it give true onlyy)
 
 //* AWESOME PART
 let moneyLeft = 0;
@@ -467,6 +467,8 @@ if (height) {
 }
 //Height is undefined :((.  --> coz height is undefined (at the beginning) and that's falsy
 
+//----------------------------------------------------------------------------------------
+
 //* Equality Operators == vs ===
 //! == doesn't check for datatype === do check for data type too
 //! ALWAYS USE ===
@@ -478,6 +480,7 @@ const age = '18';
 if (age === 18) console.log('You just became an adult(strict) ;))'); //false
 if (age == 18) console.log('You just became an adult(loose) ;))'); //true
 
+/*
 //const secretKey = prompt('Enter Secret Key');  // Prompt will take everything be default a STRING
 //so first convert it into number
 const secretKey = Number(prompt('Enter Secret Key'));
@@ -505,3 +508,53 @@ if (numNeighbours === 1) {
 } else {
   console.log('No borders');
 }
+
+*/
+//----------------------------------------------------------------------------------------
+
+//*Boolean Logic
+// AND - true when ALL are true
+// OR - true when ONE is true
+// NOT - Inverts true/false value
+
+//!Awesome Example
+/*
+// const hasDriverLicense = true; //A
+// const hasGoodVision = false; //B
+
+//minAge = 18; //already declared above
+let driverAge = Number(prompt(`What's your age in number?`));
+let vision = prompt(`Do you've a good vision?`);
+
+var hasDriverLicense = driverAge >= minAge;
+if (vision === 'yes') {
+  hasGoodVision = true;
+} else if (vision === 'no') {
+  hasGoodVision = false;
+} else {
+  alert('Please ans in yes or no!!');
+}
+
+if (hasDriverLicense && hasGoodVision) {
+  console.log(
+    `As your age is ${driverAge} and have a good vision, You can take the car :))`
+  );
+} else {
+  if (hasDriverLicense) {
+    console.log(`You've a driver license but improve your vision`);
+  } else if (!hasDriverLicense && hasGoodVision) {
+    console.log(
+      `Nopee you can't take the car :(( Come after ${
+        minAge - driverAge
+      } years... no need to improve on your vision`
+    );
+  } else {
+    console.log(
+      `Nopee you can't take the car :(( Come after ${
+        minAge - driverAge
+      } years... and also improve your vision`
+    );
+  }
+}
+*/
+//----------------------------------------------------------------------------------------
