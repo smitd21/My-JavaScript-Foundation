@@ -429,3 +429,10 @@ n = n - 1; // '11'-1 = 10 -> Number    (- therefore numberly calc and automatica
 console.log(n); //10 Number (in PURPLE)
 
 console.log('10' - '4' - '3' - 2 + '5'); //15 - String (in WHITE)
+
+//Assignment 6 ✅
+console.log('9' - '5'); //4 - Number (in PURPLE)
+console.log('19' - '13' + '17'); //617 - String (in WHITE)
+console.log('19' - '13' + 17); //23 - Number (in PURPLE)
+console.log('123' < 57); //false -  boolean
+console.log(5 + 6 + '4' + 9 - 4 - 2); //1143 - Number (in PURPLE)
