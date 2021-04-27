@@ -493,3 +493,15 @@ if (secretKey === 2107) {
 }
 //Another way
 if (secretKey !== 2107) console.log('Why not 2107 ?');
+
+//Assignment 7 ✅
+var numNeighbours = Number(
+  prompt('How many neighbour does your country have?')
+);
+if (numNeighbours === 1) {
+  console.log('Only 1 border!');
+} else if (numNeighbours > 1) {
+  console.log('More than 1 border', numNeighbours, typeof numNeighbours);
+} else {
+  console.log('No borders');
+}
