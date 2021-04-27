@@ -249,10 +249,10 @@ console.log(a, b); //19,19
 //coz when the ass operator will take place at the end  after math it'll be a=b=19
 
 //Highest precedence one with parentheses - like in math
-
 const averageAge = (ageOfSmit + ageOfDeep) / 2;
 console.log(averageAge); //(21+23)/2 = 22
 
+//Coding Challenge #1 & #2 ✅
 let massMark, heightMark;
 let massJohn, heightJohn;
 // massMark = 78;
@@ -267,11 +267,15 @@ heightJohn = 1.76;
 var markBmi = massMark / heightMark ** 2;
 var johnBmi = massJohn / heightJohn ** 2;
 console.log(markBmi, johnBmi);
-let markHigherBmi = markBmi > johnBmi;
-if (markHigherBmi) {
-  console.log('Mark has a HIGHER BMI');
+let isHigherBmi = markBmi > johnBmi;
+if (isHigherBmi) {
+  console.log(
+    `Mark's BMI (${markBmi}) has a HIGHER BMI than John's BMI(${johnBmi})`
+  );
 } else {
-  console.log('John has a HIGHER BMI');
+  console.log(
+    `John's BMI (${johnBmi}) has a HIGHER BMI than Mark's BMIT${markBmi}`
+  );
 }
 //----------------------------------------------------------------------------------------
 
@@ -348,3 +352,4 @@ if (myBirthYear <= 2100 && myBirthYear > 2000) {
   century = 22;
   console.log(`Belongs to ${century}nd century!`);
 }
+//----------------------------------------------------------------------------------------
