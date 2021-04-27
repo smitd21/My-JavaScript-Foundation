@@ -353,3 +353,79 @@ if (myBirthYear <= 2100 && myBirthYear > 2000) {
   console.log(`Belongs to ${century}nd century!`);
 }
 //----------------------------------------------------------------------------------------
+
+//*Type Conversion & Coercion
+
+//!----Type Conversion -- manually converting----
+
+const inputNumber = '1991';
+console.log(inputNumber + 30); //'199130'
+//String to Number conversion
+console.log(Number(inputNumber), inputNumber); //1991-nmmber,1991-string
+console.log(Number(inputNumber) + 30); //2021
+//Number() will change any value type to a Number type
+
+//What is impossible to convert
+console.log(Number('Smit')); //NaN
+
+//* But typeof NaN is actually a number
+console.log(typeof NaN); //number -- still a number but invalid nummber
+
+if (typeof NaN === 'number') {
+  console.log('Typeof NaN is a number'); //trueeee
+} else {
+  console.log('Ehhhh');
+}
+//Output = Typeof NaN is a number
+
+//Number to string conversion
+console.log(String(99)); //99 but STRING type as in console it comes in WHITE
+console.log(99); //99 but NUMBER type as in console it comes in PURPLE
+//string - WHITE / number - PURPLE (in CONSOLE).
+console.log(String(99), 99); //99,99 in white,purple
+
+//!----Type Coercion -- automatically converting----
+//basically tyoe coercion happens whenever an operator is dealing with two values that have different types.
+//so in this case JS will then behind the scenes convert one of the value to match the other value.
+
+console.log('I am ' + 21 + ' years old'); //+21+ will automatically put 23 in a Number type
+
+console.log('23' - '10' - 3); //10 -  Number
+//Here as the JS converted strings to number we get 10
+//as - will convert it into number automatically
+
+console.log('23' + '10' - 3); //2307 - Number
+console.log('23' + '10' + 3); //2313 - String
+//*+ therefore no conversion - it'll concat
+
+console.log('100' + '70'); //10070 - String
+console.log('100' - '70'); //30 - Number
+
+//* So AUTOMATIC CONVERSION to number if subtracted -
+//  and added strins are concated not numberly added
+
+console.log('100' + '70' - 30); // '10070'-30 = 10040  (number)
+//10040 - Number coz last me minus huaa automatic conversion to number and then minus hi hogaa numberly
+
+//*Also same in * and / there also automatic conversion will happen giving number as ouput and numberly calc will onlu occur
+
+console.log('100' * '2'); //200 - Number
+console.log('100' / '2'); //50 - Number
+
+//Conclusion
+//! If strings are added using + it'll obviously concat and give the output in string
+//! If -,*,/ it'll convert automatically to number even if strings are subtracted,*,/ final output will be a  Number only
+
+//*In logical also it'll convert automatically into number and then compare it
+console.log('100' > '70'); //true
+
+//! Sooo only in + it'll not convert and keep on concat
+
+//GUESS THE OUTPUT
+let n = '1' + 1; // '11'   ->string      (+ so concat and never converting remains in sttring)
+console.log(n); // '11'   ->string (in WHITE)
+
+n = n - 1; // '11'-1 = 10 -> Number    (- therefore numberly calc and automatically converting in a string)
+console.log(n); //10 Number (in PURPLE)
+
+console.log('10' - '4' - '3' - 2 + '5'); //15 - String (in WHITE)
