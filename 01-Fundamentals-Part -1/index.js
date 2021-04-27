@@ -436,3 +436,33 @@ console.log('19' - '13' + '17'); //617 - String (in WHITE)
 console.log('19' - '13' + 17); //23 - Number (in PURPLE)
 console.log('123' < 57); //false -  boolean
 console.log(5 + 6 + '4' + 9 - 4 - 2); //1143 - Number (in PURPLE)
+
+//*Truthy and Falsy Values
+//!5 falsy values : 0, '', undefined, null, NaN (and obv false will give false)
+//Below all will give false as output
+console.log(Boolean(0));
+console.log(Boolean(''));
+console.log(Boolean(undefined));
+console.log(Boolean(null));
+console.log(Boolean(NaN));
+
+//and everything else is truthy
+console.log(Boolean('Smit')); //true
+console.log(Boolean({})); //true (empty string gives true not empty bracket it give true onlyy)
+
+//* AWESOME PART
+let moneyLeft = 0;
+if (moneyLeft) {
+  console.log('Yes you can spend :))');
+} else {
+  console.log('No money left :((');
+}
+//No money left :((  -> coz 0 is falsyy
+
+let height;
+if (height) {
+  console.log('YAY! height is defined');
+} else {
+  console.log('Height is undefined :((');
+}
+//Height is undefined :((.  --> coz height is undefined (at the beginning) and that's falsy
