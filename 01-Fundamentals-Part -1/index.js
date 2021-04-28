@@ -517,46 +517,6 @@ if (numNeighbours === 1) {
 // OR - true when ONE is true
 // NOT - Inverts true/false value
 
-//!Awesome Example
-/*
-// const hasDriverLicense = true; //A
-// const hasGoodVision = false; //B
-
-//minAge = 18; //already declared above
-let driverAge = Number(prompt(`What's your age in number?`));
-let vision = prompt(`Do you've a good vision?`);
-
-var hasDriverLicense = driverAge >= minAge;
-if (vision === 'yes') {
-  hasGoodVision = true;
-} else if (vision === 'no') {
-  hasGoodVision = false;
-} else {
-  alert('Please ans in yes or no!!');
-}
-
-if (hasDriverLicense && hasGoodVision) {
-  console.log(
-    `As your age is ${driverAge} and have a good vision, You can take the car :))`
-  );
-} else {
-  if (hasDriverLicense) {
-    console.log(`You've a driver license but improve your vision`);
-  } else if (!hasDriverLicense && hasGoodVision) {
-    console.log(
-      `Nopee you can't take the car :(( Come after ${
-        minAge - driverAge
-      } years... no need to improve on your vision`
-    );
-  } else {
-    console.log(
-      `Nopee you can't take the car :(( Come after ${
-        minAge - driverAge
-      } years... and also improve your vision`
-    );
-  }
-}
-*/
 //Assignment 8 ✅
 var stayCountry = 'Portugal';
 var ifLanguage = 'english';
@@ -573,8 +533,8 @@ if (ifLanguage === 'english' && ifPopulation < 50 && !isThatIsland) {
 //Coding Challenge #3 ✅
 
 //Dolphins & Koalas
-const dolphinAvgScore = (97 + 112 + 101) / 3;
-const koalasAvgScore = (109 + 95 + 106) / 3;
+const dolphinAvgScore = (97 + 112 + 80) / 3;
+const koalasAvgScore = (109 + 95 + 50) / 3;
 //Higher than the other team as well as avg score should be greater than 100 then the TEAM WINS
 if (dolphinAvgScore > koalasAvgScore && dolphinAvgScore >= 100) {
   console.log(`Dolphin's: ${dolphinAvgScore} > Koala's : ${koalasAvgScore}`);
@@ -602,3 +562,42 @@ if (dolphinAvgScore > koalasAvgScore && dolphinAvgScore >= 100) {
   console.log(`Dolphin's: ${dolphinAvgScore} = Koala's : ${koalasAvgScore}`);
   console.log('No results due to low average scores of both the teams !!!');
 }
+
+//!Awesome Example
+//minAge = 18; //already declared above
+/*
+let driversAge = Number(prompt(`Enter your age in number?`));
+let hasDriverLicense = driversAge >= minAge;
+//console.log(canDrive);
+let vision = prompt(`Do you have a good vision?`);
+let hasGoodVision;
+if (vision === 'yes') {
+  hasGoodVision = true;
+} else if (vision === 'no') {
+  hasGoodVision = false;
+} else {
+  alert(`Please give your answer in yes or no only !`);
+}
+if (hasDriverLicense && hasGoodVision) {
+  console.log(
+    `Yayyy!!! you can take the care as you have driver's license also has a good vision!!`
+  );
+} else {
+  if (!hasDriverLicense && hasGoodVision) {
+    console.log(
+      `You need a driver's license come after ${
+        minAge - driversAge
+      } years :(( ...but no need of working on your vision`
+    );
+  } else if (hasDriverLicense && !hasGoodVision) {
+    console.log(`You've a driver's license but improve your vision :((`);
+  } else {
+    console.log(
+      `You need a driver's license come after ${
+        minAge - driversAge
+      } years :(( ... also you need to work on your vision`
+    );
+  }
+}
+*/
+//----------------------------------------------------------------------------------------
