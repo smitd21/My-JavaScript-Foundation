@@ -451,7 +451,7 @@ console.log(Boolean('Smit')); //true
 console.log(Boolean({})); //true (empty string gives false not empty bracket it give true onlyy)
 
 //* AWESOME PART
-let moneyLeft = 0;
+let moneyLeft = 0; //0 - will go to else - since falsy
 if (moneyLeft) {
   console.log('Yes you can spend :))');
 } else {
@@ -459,7 +459,7 @@ if (moneyLeft) {
 }
 //No money left :((  -> coz 0 is falsyy
 
-let height;
+let height; //undefined - will go to else - since falsy
 if (height) {
   console.log('YAY! height is defined');
 } else {
@@ -469,7 +469,7 @@ if (height) {
 
 //----------------------------------------------------------------------------------------
 
-//* Equality Operators == vs ===
+//* Equality Operators == loose vs === strict
 //! == doesn't check for datatype === do check for data type too
 //! ALWAYS USE ===
 
@@ -601,7 +601,7 @@ if (hasDriverLicense && hasGoodVision) {
 }
 */
 //----------------------------------------------------------------------------------------
-
+/*
 let day = prompt('Enter a day to know your schedule');
 if (day === 'monday') {
   console.log(`Plan course structure`);
@@ -619,7 +619,7 @@ if (day === 'monday') {
 }
 //* THE SWITCH STATEMENT
 switch (day) {
-  case 'monday':
+  case 'monday': //Check if day === 'monday' (strick )
     console.log(`Plan course structure`);
     console.log(`Go to coding meetup`);
     break;
@@ -636,4 +636,29 @@ switch (day) {
   case 'saturday':
   case 'sunday':
     console.log(`Enjoy the weekend`);
+  default:
+    console.log(`Not a valid day`);
+}
+*/
+//Assignment 9 ✅
+let selectedLanguage = prompt('Select your preffered language');
+switch (selectedLanguage) {
+  case 'chinese':
+  case 'mandarin':
+    console.log(`MOST number of native speakers!`);
+    break;
+  case 'spanish':
+    console.log(`2nd place in number of native speakers`);
+    break;
+  case 'english':
+    console.log(`3rd place`);
+    break;
+  case 'hindi':
+    console.log(`Number 4`);
+    break;
+  case 'arabic':
+    console.log(`5th most spoken language`);
+    break;
+  default:
+    console.log(`Great language too :D`);
 }
