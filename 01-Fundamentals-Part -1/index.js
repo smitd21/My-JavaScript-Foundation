@@ -639,7 +639,9 @@ switch (day) {
   default:
     console.log(`Not a valid day`);
 }
-//Assignment 9 ✅
+
+Assignment 9 ✅
+
 let selectedLanguage = prompt('Select your preffered language');
 switch (selectedLanguage) {
   case 'chinese':
@@ -694,7 +696,7 @@ Uncaught SyntaxError: Unexpected token 'if'
 We alreay learned about 2 conditionals - the regular if else statement & the switch statement
 But We've another one i.e
 *The Conditional (Ternary) Operator
-*/
+
 let driversAge = Number(prompt('Enter age in number :'));
 let hasDriverLicense;
 let hasGoodVision;
@@ -709,11 +711,12 @@ hasDriverLicense && hasGoodVision
         minAge - driversAge
       } years with a license :(( and also improve your vision`
     );
-
+*/
 //! As ternary operator do produce a  value we can use that in Template Variables
 //unlike if else and all statements where we couldn't :( as they don't produce a value
 
-//Ternary in template
+/*
+Ternary in template
 console.log(
   `I ${
     driversAge >= minAge
@@ -721,8 +724,16 @@ console.log(
       : `can drive after ${minAge - driversAge} years` //using template here also
   }`
 );
-/*
+
  * Ternary operator is not a replacement of if/else statement.
  * We still need if/else whwn we have bigger blocks of code having multiple conditions in that case ternary is not gonna work
  * Ternary is perfect when u need a quick decision like for eg above and also can be used in Template so that's awesome
  */
+//Assignment 10 ✅
+
+console.log(
+  `${country}'s population is ${
+    population > avgPopulation ? 'above' : 'below'
+  } average`
+);
+//----------------------------------------------------------------------------
