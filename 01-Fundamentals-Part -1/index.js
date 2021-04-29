@@ -665,7 +665,7 @@ switch (selectedLanguage) {
 //----------------------------------------------------------------------------
 //* STATEMENTS and Expressions
 //Expression always produces a VALUE &
-//Statements are like full sentenc that doesn't produce a value
+//Statements are like full sentencs that doesn't produce a value
 
 //!expressions  => This all will always produce a value if console.log is done
 3 + 4;
@@ -679,7 +679,7 @@ if (23 > 10) {
 }
 //the above whole *if* is a statement coz it will not produce a value
 
-//*In Template variable you can only put expression & not a statement never
+//! In Template variable you can only put expression & not a statement never
 console.log(`I'm ${2021 - 2000} years old`); // expression in template chalegaa ✅
 console.log(`My name is ${me}`); // expression in template chalegaa ✅
 /*
@@ -688,3 +688,41 @@ console.log(`${if (23 > 10) {
 }} then show 23 is greater`);  //Statement ❌ not allowed in template throwing error
 Uncaught SyntaxError: Unexpected token 'if'
 */
+//----------------------------------------------------------------------------
+
+/*
+We alreay learned about 2 conditionals - the regular if else statement & the switch statement
+But We've another one i.e
+*The Conditional (Ternary) Operator
+*/
+let driversAge = Number(prompt('Enter age in number :'));
+let hasDriverLicense;
+let hasGoodVision;
+let vision = prompt('Do you have a good vision?');
+vision === 'yes' ? (hasGoodVision = true) : (hasGoodVision = false);
+driversAge >= minAge ? (hasDriverLicense = true) : (hasGoodVision = false);
+
+hasDriverLicense && hasGoodVision
+  ? console.log(`Yayyy!! you can take the care!!`)
+  : console.log(
+      `Nopee you cannot take the car come after ${
+        minAge - driversAge
+      } years with a license :(( and also improve your vision`
+    );
+
+//! As ternary operator do produce a  value we can use that in Template Variables
+//unlike if else and all statements where we couldn't :( as they don't produce a value
+
+//Ternary in template
+console.log(
+  `I ${
+    driversAge >= minAge
+      ? 'can drive'
+      : `can drive after ${minAge - driversAge} years` //using template here also
+  }`
+);
+/*
+ * Ternary operator is not a replacement of if/else statement.
+ * We still need if/else whwn we have bigger blocks of code having multiple conditions in that case ternary is not gonna work
+ * Ternary is perfect when u need a quick decision like for eg above and also can be used in Template so that's awesome
+ */
