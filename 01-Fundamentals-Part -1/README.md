@@ -1,4 +1,4 @@
 ## About the JavaScript Releases
 
-![](1.jpg)
-![](2.jpg)
+<img src="1.jpg" width="100" height="100">
+<img src="2.jpg" width="100" height="100">
