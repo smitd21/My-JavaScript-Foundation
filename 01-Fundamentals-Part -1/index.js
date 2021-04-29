@@ -737,3 +737,13 @@ console.log(
   } average`
 );
 //----------------------------------------------------------------------------
+
+//Final Coding Challenge #4 ✅
+
+const bill = 275; //true
+//more values: 40,430 - false
+const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+
+console.log(
+  `Your bill was : ${bill}, the tip was ${tip} so the total is ${bill + tip}`
+);
