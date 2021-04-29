@@ -639,7 +639,6 @@ switch (day) {
   default:
     console.log(`Not a valid day`);
 }
-*/
 //Assignment 9 ✅
 let selectedLanguage = prompt('Select your preffered language');
 switch (selectedLanguage) {
@@ -662,3 +661,30 @@ switch (selectedLanguage) {
   default:
     console.log(`Great language too :D`);
 }
+*/
+//----------------------------------------------------------------------------
+//* STATEMENTS and Expressions
+//Expression always produces a VALUE &
+//Statements are like full sentenc that doesn't produce a value
+
+//!expressions  => This all will always produce a value if console.log is done
+3 + 4;
+1991;
+true && false && !false;
+const me = 'Smit';
+
+//!statements - if else, for, while, ...
+if (23 > 10) {
+  const str = '23 is bigger'; // this is an expression too
+}
+//the above whole *if* is a statement coz it will not produce a value
+
+//*In Template variable you can only put expression & not a statement never
+console.log(`I'm ${2021 - 2000} years old`); // expression in template chalegaa ✅
+console.log(`My name is ${me}`); // expression in template chalegaa ✅
+/*
+console.log(`${if (23 > 10) {
+  const str = '23 is bigger'; 
+}} then show 23 is greater`);  //Statement ❌ not allowed in template throwing error
+Uncaught SyntaxError: Unexpected token 'if'
+*/
