@@ -179,6 +179,6 @@ function fruitProcessor1(apples, oranges) {
 }
 console.log(fruitProcessor1(3, 9));
 
-//! Using seperate functions and calling of 1 in another function is actually a VERY GOOD PRACTISE
+//* Using seperate functions and calling of 1 in another function is actually a VERY GOOD PRACTISE
 //Now if u want to decrease the number of pieces of fruit in a juice u dont't have to change everywhere
 //Just go to cutFruitPieces fn and change the return fruit * no. of pieces u want
