@@ -182,3 +182,18 @@ console.log(fruitProcessor1(3, 9));
 //* Using seperate functions and calling of 1 in another function is actually a VERY GOOD PRACTISE
 //Now if u want to decrease the number of pieces of fruit in a juice u dont't have to change everywhere
 //Just go to cutFruitPieces fn and change the return fruit * no. of pieces u want
+
+//Assignemt 4 ✅
+
+const percentageOfWorld = function (population) {
+  const worldPopulation = 7900;
+  const percentage = (population / worldPopulation) * 100;
+  return percentage;
+};
+const describePopulation = (country, population) => {
+  const percentage = percentageOfWorld(population);
+  return `${country} has ${population} million people, which is about ${percentage} of the world.`;
+};
+console.log(describePopulation('China', 1440));
+console.log(describePopulation('India', 1409));
+console.log(describePopulation('UK', 67));
