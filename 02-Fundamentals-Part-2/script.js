@@ -229,3 +229,35 @@ console.log(noOfyearsUntilRetirement('Jonas', 1951));
 console.log(noOfyearsUntilRetirement('Jim', 1940));
 
 //! If in a function if something is written after the return ___ ; it'll be ignored & not executed. Return means end/terminate the function.
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//Coding Challenge #1 ✅
+
+const calcAverage = (a, b, c) => (a + b + c) / 3;
+
+//Test Data
+const avgDolphins = calcAverage(44, 23, 71);
+const avgKoalas = calcAverage(65, 54, 49);
+
+//Test Data 2
+//const avgDolphins = calcAverage(85, 54, 41);
+//const avgKoalas = calcAverage(23, 34, 27);
+
+console.log(`Dolphins : ${avgDolphins} vs Koalas : ${avgKoalas}`);
+
+const checkWinner = (A, B) => {
+  if (A >= B * 2) {
+    console.log(`Dolphins win !! cuz ${A} vs ${B}`);
+  } else if (B >= A * 2) {
+    console.log(`Koalas win !! cuz ${B} vs ${A}`);
+  } else {
+    console.log(
+      `No team wins :(( cuz ${A} vs ${B} as no team have atleast the double of the other`
+    );
+  }
+};
+checkWinner(avgDolphins, avgKoalas);
+//Test Data 1: No one win (46vs56) & Test Data 2: Dolphin wins!! (60vs28)
+checkWinner(576, 112); //A>B*2
+checkWinner(102, 326); //B>A*2
