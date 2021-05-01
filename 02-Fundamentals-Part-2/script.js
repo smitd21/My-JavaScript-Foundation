@@ -114,3 +114,40 @@ And internally this happens because of a process called 'HOISTING' - that will s
 
 *Preference to use Function expression (calcAge2 or calcAge3) - coz it should be call only after defining and then calling 
 */
+
+//* Arrow function (continue)
+
+//Passing 2 arguments
+const yearsUntilRetirement = (birthYear, firstName) => {
+  const currentAge = 2021 - birthYear;
+  const retirementAge = 70;
+  return `${firstName} is going to retire in ${
+    retirementAge - currentAge
+  } years`;
+};
+//Calling the function
+console.log(yearsUntilRetirement(2000, 'Messi'));
+console.log(yearsUntilRetirement(1998, 'Ronaldo'));
+console.log(yearsUntilRetirement(1998, 'Neymar'));
+
+//Assignment 2 ✅
+//using Function Declaration
+function percentageOfWorld1(country, population) {
+  const worldPopulation = 7900;
+  const percentage = (population / worldPopulation) * 100;
+  return `${country} has ${population} million people, so it's about ${percentage} of the world population.`;
+}
+console.log(percentageOfWorld1('China', 1441));
+console.log(percentageOfWorld1('India', 1409));
+console.log(percentageOfWorld1('UK', 67));
+
+//using Function Expression
+
+const percentageOfWorld2 = function (country, population) {
+  const worldPopulation = 7900;
+  const percentage = (population / worldPopulation) * 100;
+  return `${country} has {population} people, so it's about ${percentage} of the world population.`;
+};
+console.log(percentageOfWorld2('China', 1441));
+console.log(percentageOfWorld2('India', 1409));
+console.log(percentageOfWorld2('UK', 67));
