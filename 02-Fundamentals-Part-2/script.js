@@ -99,6 +99,7 @@ console.log(`Your age is: `, calcAge2(1997));
 
 //or
 
+//Arrow Function
 const calcAge3 = (birthYear) => {
   return 2021 - birthYear;
 };
@@ -111,5 +112,5 @@ but function expression(calcAge2 & calcAge3) cannot be called before declaring -
 
 And internally this happens because of a process called 'HOISTING' - that will study later
 
-*Preference to use Function expression (calcAge2 or calcAge3) - coz it should be call only after defining and then calling
+*Preference to use Function expression (calcAge2 or calcAge3) - coz it should be call only after defining and then calling 
 */
