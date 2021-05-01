@@ -61,3 +61,13 @@ switch (customerChoice) {
 //Functions are perfect for implementing dry code as they're reusable code blocks
 
 //eg: console.log, Number() are also  inbuilt function hehe as we call that everytime
+
+//Assignment 1 ✅
+function describeCountry(country, population, capitalCity) {
+  const countryInfo = `'${country} has ${population} million people and its
+    capital city is ${capitalCity}'`;
+  return countryInfo;
+}
+console.log(describeCountry('India', 132, 'Delhi'));
+console.log(describeCountry('Finland', 6, 'Helsinki'));
+console.log(describeCountry('United States', 32, 'Washington D.C.'));
