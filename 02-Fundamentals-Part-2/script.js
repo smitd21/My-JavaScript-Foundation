@@ -7,7 +7,7 @@ const passTest = true;
 //if (passTest) hasDriverLicense = true;
 //here above we forgot an 's' in hasDriversLicense
 //so because of use strict mode; only we got to know about this error
-//on the other hand w/o the strict mode would've had identified this error and would've executed properly hehe lol
+//on the other hand w/o the strict mode wouldn't had identified this error and would've executed properly hehe lol
 
 if (passTest) hasDriversLicense = true; //correct code
 if (hasDriversLicense) console.log(`I can drive :D`);
@@ -19,3 +19,45 @@ if (hasDriversLicense) console.log(`I can drive :D`);
 //same for private and etc..
 //const private = 534; -- //!future reserved word 'private'
 //const if = 'unless'; -- //!reserved word it is 'if'
+
+//-------------------------------------------------------------------------------------
+//* Functions
+function logger() {
+  console.log(`My name is Smit`);
+}
+
+//calling / running / invoking functiion
+logger();
+logger();
+logger(23); //No parameters are taken by this function even if you pass it does'nt matter it'll run same as above
+
+let customerChoice = prompt(`What type of juice you prefer ?`);
+
+//Juice maker
+function fruitProcessor(apples, oranges) {
+  //console.log(apples, oranges);
+  const juice = `Juice with ${apples} apples and ${oranges} oranges`;
+  return juice;
+}
+
+switch (customerChoice) {
+  case 'cocktail':
+    const mixJuice = fruitProcessor(7, 6);
+    console.log(`Here is your Cocktail Juice :`, mixJuice);
+    break;
+  case 'apple':
+    const appleJuice = fruitProcessor(7, 0);
+    console.log(`Here is your Apple Juice  :`, appleJuice);
+    break;
+  case 'orange':
+    const orangeJuice = fruitProcessor(0, 8);
+    console.log(`Here is your Orange Juice :`, orangeJuice);
+    break;
+  default:
+    console.log('So sorry :) We have only cocktail, orange and apple juice!!');
+}
+
+//Clean code principle : Do not repeat yourself or dry
+//Functions are perfect for implementing dry code as they're reusable code blocks
+
+//eg: console.log, Number() are also  inbuilt function hehe as we call that everytime
