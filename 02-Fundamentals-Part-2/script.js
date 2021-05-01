@@ -21,7 +21,7 @@ if (hasDriversLicense) console.log(`I can drive :D`);
 //const if = 'unless'; -- //!reserved word it is 'if'
 
 //-------------------------------------------------------------------------------------
-//* Functions
+//* Functions - block of code that we want to reuse. (CLEAN CODE)
 function logger() {
   console.log(`My name is Smit`);
 }
@@ -117,7 +117,7 @@ And internally this happens because of a process called 'HOISTING' - that will s
 
 //* Arrow function (continue)
 
-//Passing 2 arguments
+//Passing 2 parametes
 const yearsUntilRetirement = (birthYear, firstName) => {
   const currentAge = 2021 - birthYear;
   const retirementAge = 70;
@@ -126,7 +126,7 @@ const yearsUntilRetirement = (birthYear, firstName) => {
   } years`;
 };
 //Calling the function
-console.log(yearsUntilRetirement(2000, 'Messi'));
+console.log(yearsUntilRetirement(2000, 'Messi')); //passed the arguments
 console.log(yearsUntilRetirement(1998, 'Ronaldo'));
 console.log(yearsUntilRetirement(1998, 'Neymar'));
 
@@ -197,3 +197,35 @@ const describePopulation = (country, population) => {
 console.log(describePopulation('China', 1440));
 console.log(describePopulation('India', 1409));
 console.log(describePopulation('UK', 67));
+
+//* Reviewing Functions
+
+const calculateAge = (birthYear) => {
+  if (birthYear < 2021) {
+    const age = 2021 - birthYear;
+    return age; //!Never forget to return what you want
+  } else {
+    console.log(`You aren't born yet `);
+  }
+};
+function noOfyearsUntilRetirement(firstName, birthYear) {
+  const age = calculateAge(birthYear);
+  if (age > 0) {
+    const retirementAge = 70;
+    const yearsLeft = retirementAge - age;
+    if (yearsLeft === 0) {
+      return `${firstName} you worked your ass off now enjoy your life!!`;
+    } else if (yearsLeft < 0) {
+      return `${firstName} I hope you're just enjoying your life`;
+    } else {
+      return `${firstName} you got ${yearsLeft} years left until your retirement, Work Hard Nowww !!!`;
+    }
+  } else {
+    console.log(`You aren't born yet `);
+  }
+}
+console.log(noOfyearsUntilRetirement('Smit', 2000));
+console.log(noOfyearsUntilRetirement('Jonas', 1951));
+console.log(noOfyearsUntilRetirement('Jim', 1940));
+
+//! If in a function if something is written after the return ___ ; it'll be ignored & not executed. Return means end/terminate the function.
