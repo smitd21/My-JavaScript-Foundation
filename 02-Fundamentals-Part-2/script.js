@@ -45,11 +45,11 @@ function fruitProcessor(apples, oranges) {
 }
 
 switch (customerChoice) {
-  case 'cocktail':
+  case 'cocktail':  //customerChoice === 'cocktail' In Switch always strict equality works
     const mixJuice = fruitProcessor(7, 6);
     console.log(`Here is your Cocktail Juice :`, mixJuice);
     break;
-  case 'apple':
+  case 'apple': //customerChoice === 'apple'
     const appleJuice = fruitProcessor(7, 0);
     console.log(`Here is your Apple Juice  :`, appleJuice);
     break;
@@ -107,12 +107,12 @@ console.log(`Your age is :`, calcAge3(2004));
 
 /*
 ! Difference : 
-You can call a function declaration (calcAge1) before they are defined in the code 
-but function expression(calcAge2 & calcAge3) cannot be called before declaring - Cannot access 'calcAge2' before initialization
+You can ONLY call a *function declaration* (calcAge1) before they are defined in the code 
+but function expression and arrow(calcAge2 & calcAge3) cannot be called before declaring -> !ERR - Cannot access 'calcAge2' before initialization
 
 And internally this happens because of a process called 'HOISTING' - that will study later
 
-*Preference to use Function expression (calcAge2 or calcAge3) - coz it should be call only after defining and then calling 
+*Preference to use Function expression or Arrow fn. (calcAge2 or calcAge3) - coz it should be call only after defining and then calling 
 */
 
 //* Arrow function (continue)
@@ -261,3 +261,35 @@ checkWinner(avgDolphins, avgKoalas);
 //Test Data 1: No one win (46vs56) & Test Data 2: Dolphin wins!! (60vs28)
 checkWinner(576, 112); //A>B*2
 checkWinner(102, 326); //B>A*2
+
+// Practise
+
+const customerChoice = prompt(`Enter your order:`);
+
+const glasses = (glass) => {
+  return glass * 4;
+};
+
+const bartender = (beer, vodka, whiskey) => {
+  const beerGlasses = glasses(beer);
+  const vodkaGlasses = glasses(vodka);
+  const whiskeyGlasses = glasses(whiskey);
+  return `Your order : ${beerGlasses} beers, ${vodkaGlasses} vodkas & ${whiskeyGlasses} whiskeys !!`;
+};
+
+switch (customerChoice) {
+  case 'all':
+    console.log(bartender(1, 1, 1));
+    break;
+  case 'beer':
+    console.log(bartender(1, 0, 0));
+    break;
+  case 'vodka':
+    console.log(bartender(0, 1, 0));
+    break;
+  case 'whiskey':
+    console.log(bartender(0, 0, 1));
+    break;
+  default:
+    console.log(`Choose between beer vodka and whiskey!!`);
+}
