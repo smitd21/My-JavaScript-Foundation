@@ -472,5 +472,32 @@ console.log(neighbours.indexOf('Sweden')); //0
 //Replacing Sweden with Republic of Sweden
 neighbours[neighbours.indexOf('Sweden')] = 'Republic of Sweden';
 
-console.log(neighbours);
-//(5)['Republic of Sweden','Germany','France','Iceland','Italy']
+console.log(neighbours); //(5)['Republic of Sweden','Germany','France','Iceland','Italy']
+
+//Coding Challenge #2 ✅
+const calcTip = (bill) => {
+  const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+  return tip;
+};
+const bills = [125, 555, 44];
+
+const tips = [];
+const tip1 = calcTip(bills[bills.length - bills.length]);
+const tip2 = calcTip(bills[bills.length - (bills.length - 1)]);
+const tip3 = calcTip(bills[bills.length - (bills.length - 2)]);
+tips.push(tip1, tip2, tip3);
+console.log(tips); //[18.75,111,52.8]
+
+const calcTotalBill = (tip, billAmt) => {
+  const bill = tip + billAmt;
+  return bill;
+};
+//console.log(tips[0], bills[0]);
+const t1 = calcTotalBill(tips[0], bills[0]);
+const t2 = calcTotalBill(tips[1], bills[1]);
+const t3 = calcTotalBill(tips[2], bills[2]);
+const total = [];
+total.push(t1, t2, t3);
+console.log(total); //[143.75,666,52.8]
+
+//---------------------------------------------------------------------------------------
