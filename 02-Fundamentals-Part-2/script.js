@@ -413,7 +413,7 @@ friends.push(23);
 console.log(friends.includes('23')); //false -- coz using STRICT
 console.log(friends.includes(23)); //true
 
-//! We can use includes method to write conditions -- useful application
+//* We can use includes method to write conditions -- useful application
 if (friends.includes('Ronaldo')) {
   console.log(`You have a friend called Ronaldo`);
 } else {
@@ -425,3 +425,22 @@ if (friends.includes('Akshil')) {
 } else {
   console.log(`You can just dream to be friends with Ronaldo`);
 }
+
+//Assignment 5 ✅
+const populations = [1441, 1409, 97, 67, 1015];
+console.log(populations);
+const percentages = [];
+
+const percentageOfWorlds = (population) => {
+  const worldPopulation = 7900;
+  const percentage = (population / worldPopulation) * 100;
+  return percentage;
+};
+const per1 = percentageOfWorlds(populations[populations.length - 5]); //0
+const per2 = percentageOfWorlds(populations[1]);
+const per3 = percentageOfWorlds(populations[populations.length - 3]); //2
+const per4 = percentageOfWorlds(populations[3]);
+const per5 = percentageOfWorlds(populations[populations.length - 1]); //4
+
+percentages.push(per1, per2, per3, per4, per5);
+console.log(percentages);
