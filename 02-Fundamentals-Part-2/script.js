@@ -501,4 +501,23 @@ const total = [];
 total.push(t1, t2, t3);
 console.log('Total Bill Amounts : ', total); //[143.75,666,52.8]
 
+/*
+! Array can have any type in a same array ALSO an array can be inside an array too
+  Sab chalega
+
+! PUSH  - Add at the back
+! UNSHIFT - Add in Front
+
+! POP - Remove from back
+! SHIFT - Remove from front
+
+! .indexOf('Korea') - if Exists give it's position index if not gives output as -1 if consoled
+
+! .includes('Korea') - if Exists give output true or else false
+    Uses Strict equality like in switch case
+    Can be used in condtional statements/ternary expression
+*/
+
 //---------------------------------------------------------------------------------------
+
+//* Introduction to Objects
