@@ -642,3 +642,16 @@ console.log(
 
 //FYI: In operator precedence the Dot '.' have a very high priority so it goes from left-to-right so
 //* smitObject['friendsList'].length works properly as it GOES FROM LEFT-TO-RIGHT
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Assignment 7 ✅
+const myCountry = {
+  country: 'India',
+  capital: 'Delhi',
+  language: 'Hindi',
+  population: '1409',
+  neighbours, //neighbours: neighbours,
+};
+console.log(myCountry);
+//{country: "India", capital: "Delhi", language: "Hindi", population: "1409", neighbours: Array(5) i.e neighbours: (5) ["Republic of Sweden", "Germany", "France", "Iceland", "Italy"]}
