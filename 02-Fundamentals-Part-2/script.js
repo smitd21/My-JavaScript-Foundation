@@ -366,3 +366,62 @@ console.log(ageYears);
 const yoAges = [age0, age1, age2, age3, ageCalc(ageYears[ageYears.length - 1])];
 //FYIII : In ageCalc(ageYears[ageYears.length - 1]) placed in last position JS will first call the function and then place the value in the Array
 console.log(yoAges);
+
+//* Basic Array Operations
+//friends = ['Parth', 'Akshil', 'Bhavya'];
+
+//! PUSH   -- add element to the end of the array
+let newestLength = friends.push('Shiven', 'Jaiveer'); // This'll push these elements to the array
+//but also it returns/gives the new final length of the array after pushing that many new elements into the array that's awesome
+console.log(newestLength); //5  - length after adding latest elements
+console.log(friends);
+//friends = ['Parth', 'Akshil', 'Bhavya','Shiven', 'Jaiveer'];
+
+//! unshift -- add elements to the beginning of the array
+newestLength = friends.unshift('Amay', 'Guru', 'Neel');
+console.log(newestLength); //8 -- length after adding latest elements
+console.log(friends);
+// (8) ['Amay','Guru','Neel','Parth','Akshil','Bhavya','Shiven','Jaiveer']
+
+//! POP - remove the last element of the array (Opposite of push)
+let popped = friends.pop();
+console.log(popped); //Jaiveer - The one that's popped which was at the last
+console.log(friends);
+//(7) ['Amay','Guru','Neel','Parth','Akshil','Bhavya','Shiven']
+
+//! Shift - remove the first element of the array (Opposite of unshift)
+popped = friends.shift();
+console.log(popped); //Amay - first element
+console.log(friends);
+//(6) ['Guru','Neel','Parth','Akshil','Bhavya','Shiven']
+
+//! indexOf - To know the position of a certain element in the array
+
+//(6) ['Guru','Neel','Parth','Akshil','Bhavya','Shiven']
+console.log(friends.indexOf('Akshil')); //3
+console.log(friends.indexOf('Bhavya')); //4
+//If an element is not in the array and u ask index of that it will give -1
+console.log(friends.indexOf('Ronaldo')); //* -1 - not in the array so cannot find index it'll give -1
+
+//A similar ES6 modern method -
+//! includes - return true if the element is in the array & false if it's not
+//* This method uses STRICT Equality for this check (like in switch)
+console.log(friends.includes('Ronaldo')); //false
+console.log(friends.includes('Bhavya')); //true
+console.log(friends.includes('Shiven')); //true
+friends.push(23);
+console.log(friends.includes('23')); //false -- coz using STRICT
+console.log(friends.includes(23)); //true
+
+//! We can use includes method to write conditions -- useful application
+if (friends.includes('Ronaldo')) {
+  console.log(`You have a friend called Ronaldo`);
+} else {
+  console.log(`You can just dream to be friends with Ronaldo`);
+}
+
+if (friends.includes('Akshil')) {
+  console.log(`You have a friend called Akshil`);
+} else {
+  console.log(`You can just dream to be friends with Ronaldo`);
+}
