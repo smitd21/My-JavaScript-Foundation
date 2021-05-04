@@ -444,3 +444,33 @@ const per5 = percentageOfWorlds(populations[populations.length - 1]); //4
 
 percentages.push(per1, per2, per3, per4, per5);
 console.log(percentages);
+
+//Assignment 6 ✅
+
+const neighbours = ['Germany', 'France', 'Spain', 'Italy'];
+console.log(neighbours.push('Utopia')); //5
+console.log(neighbours);
+console.log(neighbours.pop());
+if (neighbours.includes('Germany')) {
+  console.log(`A central European country:D`);
+} else {
+  console.log(`Probably not a central European country :D`);
+}
+if (neighbours.includes('India')) {
+  console.log(`India in Europe wth!!!`);
+} else {
+  console.log(`India is in Asia bruhhh!!`);
+}
+console.log(neighbours.indexOf('Spain'));
+//Replacing Spain with Iceland
+neighbours[neighbours.indexOf('Spain')] = 'Iceland';
+console.log(neighbours); //(4)['Germany','France','Iceland','Italy']
+
+console.log(neighbours.unshift('Sweden')); //5
+console.log(neighbours); //(5)['Sweden','Germany','France','Iceland','Italy']
+console.log(neighbours.indexOf('Sweden')); //0
+//Replacing Sweden with Republic of Sweden
+neighbours[neighbours.indexOf('Sweden')] = 'Republic of Sweden';
+
+console.log(neighbours);
+//(5)['Republic of Sweden','Germany','France','Iceland','Italy']
