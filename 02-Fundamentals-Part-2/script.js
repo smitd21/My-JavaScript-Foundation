@@ -480,13 +480,14 @@ const calcTip = (bill) => {
   return tip;
 };
 const bills = [125, 555, 44];
+console.log('Bills w/o tips: ', bills);
 
-const tips = [];
 const tip1 = calcTip(bills[bills.length - bills.length]);
 const tip2 = calcTip(bills[bills.length - (bills.length - 1)]);
 const tip3 = calcTip(bills[bills.length - (bills.length - 2)]);
+const tips = [];
 tips.push(tip1, tip2, tip3);
-console.log(tips); //[18.75,111,52.8]
+console.log('Tips :', tips); //[18.75,111,52.8]
 
 const calcTotalBill = (tip, billAmt) => {
   const bill = tip + billAmt;
@@ -498,6 +499,6 @@ const t2 = calcTotalBill(tips[1], bills[1]);
 const t3 = calcTotalBill(tips[2], bills[2]);
 const total = [];
 total.push(t1, t2, t3);
-console.log(total); //[143.75,666,52.8]
+console.log('Total Bill Amounts : ', total); //[143.75,666,52.8]
 
 //---------------------------------------------------------------------------------------
