@@ -521,3 +521,26 @@ console.log('Total Bill Amounts : ', total); //[143.75,666,52.8]
 //---------------------------------------------------------------------------------------
 
 //* Introduction to Objects
+
+const smitArray = ['Smit', 'Desai', 2021 - 2000, 'web developer', friends];
+console.log(smitArray);
+
+// Object Literal Syntax : bcoz we are literally wrting down the entire object content
+const smitObject = {
+  //Key: property,
+  firstName: 'Smit',
+  lastName: 'Desai',
+  age: 2021 - 2000,
+  job: 'web developer',
+  friendsList: friends,
+};
+console.log(smitObject);
+
+/*
+! Big Difference between object and arrays, is that in objects, the order of these values doesn't matter at all when we want to retrieve them.
+
+! In Arrays the order in which we specify the elements matters alot bcoz that's how we access/get data of the array elements using their order number
+
+* That's why we should use Array for more ordered data
+* & Objects for more unstructured data
+*/
