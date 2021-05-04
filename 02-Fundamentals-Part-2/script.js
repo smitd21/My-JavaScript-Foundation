@@ -525,7 +525,9 @@ console.log('Total Bill Amounts : ', total); //[143.75,666,52.8]
 const smitArray = ['Smit', 'Desai', 2021 - 2000, 'web developer', friends];
 console.log(smitArray);
 
-// Object Literal Syntax : bcoz we are literally wrting down the entire object content
+/*
+Object Literal Syntax : bcoz we are literally wrting down the entire object content
+
 const smitObject = {
   //Key: property,
   firstName: 'Smit',
@@ -536,7 +538,7 @@ const smitObject = {
 };
 console.log(smitObject);
 
-/*
+
 ! Big Difference between object and arrays, is that in objects, the order of these values doesn't matter at all when we want to retrieve them.
 
 ! In Arrays the order in which we specify the elements matters alot bcoz that's how we access/get data of the array elements using their order number
@@ -544,3 +546,99 @@ console.log(smitObject);
 * That's why we should use Array for more ordered data
 * & Objects for more unstructured data
 */
+
+/* 
+* Retrieve data from objects 
+* & also learn how to change data in objects using both the dot and bracket notation
+
+As we said earlier the order of the object doesn't matter while accessing the data
+That's because we simple get the properties value from the object using the property name itself
+*/
+
+//! Important Example for OBJECTS
+
+const smitObject = {
+  //Key: property,
+  firstName: 'Smit',
+  lastName: 'Desai',
+  age: 2021 - 2000,
+  job: 'web developer',
+  friendsList: friends,
+};
+//Ways to retrieve data from an object
+console.log(smitObject);
+//! 1. Dot Notation
+console.log(smitObject.job); // web developer
+console.log(smitObject.lastName);
+//! 2. Bracket Notation
+console.log(smitObject['age']);
+console.log(smitObject['friendsList']); //(7)['Guru', 'Neel','Parth','Akshil','Bhavya','Shiven',23]
+
+const nameKey = 'Name';
+console.log(smitObject['first' + nameKey]); //Smit
+console.log(smitObject['last' + nameKey]); //Desai
+//'first' + anything = it'll obviously goint to get concat since string + anything = string from Fundament-Part01
+
+const interestedIn = prompt(
+  `What do you want to know about Jonas? Choose between firstName, lastName,age, job and friendsList`
+);
+/*
+switch (interestedIn) {
+  case 'firstName':
+    console.log('Hola my name is:', smitObject['firstName']);
+    break;
+  case 'lastName':
+    console.log('My last Name is :', smitObject['lastName']);
+    break;
+  case 'age':
+    console.log(`My Age is ${smitObject['age']}:`);
+    break;
+  case 'job':
+    console.log(`Smit works as  a ${smitObject['job']}`);
+    break;
+  case 'friendsList':
+    console.log(`My friends are :`, smitObject['friendsList']);
+    break;
+  default:
+    console.log(`Ask whatever we ask you to :((`);
+}
+*/
+//* OR simplyy
+//console.log(smitObject[interestedIn]);
+
+//If u enter in prompt anything else other than the data(property) we have it gives output as undefined right
+// Since undefined is a falsy value (will go into else obviously)
+
+if (smitObject[interestedIn]) {
+  console.log(smitObject[interestedIn]);
+} else {
+  console.log(`Ask whatever we ask you to :((`); //Same as our default in the switch
+}
+
+//! Add new properties to an Object using Dot and Bracket
+//Property to be added: location & twitter
+
+// IT's pretty straight forward right you just ADD
+smitObject.location = 'Mumbai'; //Dot
+smitObject['twitter'] = 'smitcodes'; //Bracket
+
+console.log(smitObject);
+/*
+age: 21
+firstName: "Smit"
+friendsList: (7) ["Guru", "Neel", "Parth", "Akshil", "Bhavya", "Shiven", 23]
+job: "web developer"
+lastName: "Desai"
+location: "Mumbai"
+twitter: "smitcodes"
+*/
+
+// const noOfFriends = smitObject['friendsList'];
+// console.log(noOfFriends);
+console.log(
+  `${smitObject['firstName']} has ${smitObject['friendsList'].length} friends, and his bestfriend is called ${smitObject['friendsList'][0]}`
+);
+//Smit has 7 friends and his bestfriend is called Guru
+
+//FYI: In operator precedence the Dot '.' have a very high priority so it goes from left-to-right so
+//* smitObject['friendsList'].length works properly as it GOES FROM LEFT-TO-RIGHT
