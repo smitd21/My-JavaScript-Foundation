@@ -264,6 +264,7 @@ checkWinner(102, 326); //B>A*2
 
 // Practise
 
+/*
 const customerChoice = prompt(`Enter your order:`);
 
 const glasses = (glass) => {
@@ -293,3 +294,75 @@ switch (customerChoice) {
   default:
     console.log(`Choose between beer vodka and whiskey!!`);
 }
+*/
+//-------------------------------------------------------------------------------------------------------------
+
+//! Two Important Data Structures in JavaScript are ARRAYS & OBJECTS
+
+//* Introduction to Arrays
+
+//Array can hold any type of values and also unlimitec
+
+const friends = ['Michael', 'Steven', 'Peter'];
+console.log(`Friend's Array : ${friends}`);
+console.log('Type of Array: ', typeof friends); //Object
+
+//Another method to define an array
+
+const years = new Array(1999, 1875, 2007, 2001, 2012, 2020);
+
+//Take out element of an array
+console.log(friends[0]); //Michael
+console.log(friends[2]); //Peter
+//Length of an array
+console.log(friends.length); //3
+
+//Find the last element of an array - Always length-1
+console.log(friends[friends.length - 1]); //friends[2]
+
+//! Expression - Gives a values & Statement doesn't
+//friends[expressions] --- inside the bracket there should be an expression/value & NOT A STATEMENT
+
+//* Arrays are MUTABLE - Any value can be changed anytime
+//friends = ['Michael','Steven','Peter']
+friends[friends.length - 2] = 'Akshil'; //Change the second last element to Smit
+friends[0] = 'Parth';
+friends[friends.length - 1] = 'Bhavya';
+console.log(friends); //(3) ['Parth','Smit','Bhavya']
+
+/*
+! friends was declared with const then why it can be changed
+Isn't that a contradiction becoz const value cannot be changed
+Ans : NO !!
+* Only Primitive values, are immutable but ARRAY is not a primitive
+* SO WE CAN ACTUALLY ALWAYS CHANGE IT SO WE CAN MUTATE IT
+
+* Conclusion : CAN MUTATE ARRAYS ANYWHERE/ANYTIME even though if it is declared with const
+
+! BUT the ENTIRE array cannot be replaced just the elements of the array can be changed
+const friends = ['Bob', 'Alice', 'Jonas'];  //!ERR friends already declared
+*/
+
+//* Array can hold different types at the same time
+const firsName = 'Smit';
+const diffTypesArray = [firsName, 2000, 'Web Developer', 2021 - 2000, friends];
+console.log(diffTypesArray);
+//(5) ['Smit', 2000, 'Web Developer',21,['Parth','Akshil','Bhavya']]
+console.log(diffTypesArray.length); //5
+
+//example
+const ageCalc = (birthYear) => {
+  return 2021 - birthYear;
+};
+const ageYears = [1990, 1967, 2000, 2010, 2018];
+// ageCalc(year)  year hona chahiye andar - ek value
+const age0 = ageCalc(ageYears[ageYears.length - 5]);
+const age1 = ageCalc(ageYears[ageYears.length - 4]);
+const age2 = ageCalc(ageYears[ageYears.length - 3]);
+const age3 = ageCalc(ageYears[ageYears.length - 2]);
+const age4 = ageCalc(ageYears[ageYears.length - 1]);
+
+console.log(ageYears);
+const yoAges = [age0, age1, age2, age3, ageCalc(ageYears[ageYears.length - 1])];
+//FYIII : In ageCalc(ageYears[ageYears.length - 1]) placed in last position JS will first call the function and then place the value in the Array
+console.log(yoAges);
