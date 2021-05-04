@@ -650,8 +650,31 @@ const myCountry = {
   country: 'India',
   capital: 'Delhi',
   language: 'Hindi',
-  population: '1409',
+  population: '1395',
   neighbours, //neighbours: neighbours,
 };
 console.log(myCountry);
 //{country: "India", capital: "Delhi", language: "Hindi", population: "1409", neighbours: Array(5) i.e neighbours: (5) ["Republic of Sweden", "Germany", "France", "Iceland", "Italy"]}
+
+// Assignment 8 ✅
+//* Using Dot Notation
+console.log(
+  `${myCountry.country} has ${Number(myCountry.population) + 2} million ${
+    myCountry.language
+  }-speaking people, ${
+    myCountry.neighbours.length
+  } neighbouring countries and a capital called ${myCountry.capital}`
+);
+//* Using Bracket Notation
+console.log(
+  `${myCountry['country']} has ${myCountry['population'] - 2} million ${
+    myCountry['language']
+  }-speaking people, ${
+    myCountry['neighbours'].length
+  } neighbouring countries and a capital called ${myCountry['capital']}`
+);
+
+//For adding 2 you'll need to cover it into Number first or else it'll concat
+//Number(myCountry.population)+2 = 1397
+//For subtract,(mul,div) no need to do anything it'll automatically convert to number
+//myCountry.population-2; = 1393
