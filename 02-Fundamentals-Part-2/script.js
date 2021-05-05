@@ -618,7 +618,8 @@ if (smitObject[interestedIn]) {
 //! Add new properties to an Object using Dot and Bracket
 //Property to be added: location & twitter
 
-// IT's pretty straight forward right you just ADD
+// IT's pretty straight forward right you just
+//! ADD properties/values to objects
 smitObject.location = 'Mumbai'; //Dot
 smitObject['twitter'] = 'smitcodes'; //Bracket
 
@@ -674,7 +675,148 @@ console.log(
   } neighbouring countries and a capital called ${myCountry['capital']}`
 );
 
-//For adding 2 you'll need to cover it into Number first or else it'll concat
+//For adding 2 you'll need to convert it into Number first or else it'll concat
 //Number(myCountry.population)+2 = 1397
 //For subtract,(mul,div) no need to do anything it'll automatically convert to number
 //myCountry.population-2; = 1393
+
+/*
+* Object Methods
+
+* Objects can hold any type of values inside it can alo be an array as well as object inside object
+
+! Earlier we said that FUNCTIONS are really just another type of value
+And if a function is just  a value that means that we can create a key value pair in which the value is a function
+* => A function can be a value of a key 
+! i.e WE CAN ADD FUNCTIONS TO OBJECTS
+*/
+
+//New Smit Object holding all kind of data types
+const newSmitObject = {
+  firstName: 'Smit',
+  lastName: 'Desai',
+  birthYear: 2000,
+  job: 'web developer',
+  friends,
+  hasDriversLicense: true,
+  //Adding a function to object - similar to how we define normal fn. ==> just colon instead of =
+  calcAge: function (birthYear) {
+    return 2021 - birthYear;
+  },
+};
+console.log(newSmitObject);
+console.log(newSmitObject['friends']);
+
+//Calling the function when u need to use its data/value
+
+// A web developer of age 21
+//! Dot Notation
+console.log(`A ${newSmitObject.job} of age ${newSmitObject.calcAge(2000)}`);
+//! Bracket Notation - imp
+console.log(
+  `A ${newSmitObject['job']} of age ${newSmitObject['calcAge'](2000)}`
+);
+
+//! OR use the birthYear from the object Itself
+
+//* METHOD 1: - You're repeating code everytime using the values
+console.log(
+  `A ${newSmitObject.job} of age ${newSmitObject.calcAge(
+    newSmitObject.birthYear
+  )}`
+);
+//newSmitObject.calcAge(newSmitObject.birthYear) ==> newSmitObject['calcAge'](newSmitObject['birthYear'])
+console.log(
+  `A ${newSmitObject['job']} of age ${newSmitObject['calcAge'](
+    newSmitObject['birthYear']
+  )}`
+);
+
+//! METHOD 2 : V IMPORTANT
+//In every method JS gives us access to a special variable called this.
+//this keyword will point to the parent object and give entire object values inside the parent object if you use this
+
+const smit = {
+  firstName: 'Smit',
+  lastName: 'Desai',
+  birthYear: 2000,
+  job: 'web developer',
+  friends,
+  hasDriversLicense: false,
+  //Method 1: see above
+  // calcAge: function (birthYear) {
+  //   return 2021 - birthYear;
+  // },
+
+  //Method 2:
+  //calcAge: function () {
+  //console.log(this); //this is entire smit (parent) object - can take any value from it
+  //return 2021 - this.birthYear; //!  so this.birthYear = smit.birthYear -- you can use smit.birthYear too but if you in case change the main object name you'll have to change everywhere also and also you are violating the don't repeat yourself principle so better use this
+  //this.birthYear will give you the value no matter what the object name is even if it changes => never hardcode the object name just use this.
+  //},
+
+  //! Method 3: Efficient Way
+  //You can even add new properties using this
+  calcAge: function () {
+    //Add age property when calcAge is called
+    this.age = 2021 - this.birthYear;
+    return this.age;
+  },
+  //! Getting All the Data from the same parent object so using THIS keyword
+  getSummary: function () {
+    return `${this.firstName} is a ${this.calcAge()}-year old ${
+      this.job
+    } and he ${
+      this.hasDriversLicense ? 'has' : `doesn't have`
+    } a driver's license !!`;
+  },
+};
+// console.log('Age :', smit.calcAge()); //You have to call calcAge to use smit.age
+// console.log('Efficient Age :', smit.age);
+
+//Challenge
+smit.calcAge(); //call calcAge to use smit.age - tho it gives the age too since the age is returned
+// One can use smit.age now once it's already been called once (above)
+console.log(
+  `${smit.firstName} is a ${smit.age}-year old ${smit.job} and he ${
+    smit.hasDriversLicense ? 'has' : `doesn't have`
+  } a drivers license !!`
+);
+//Can Use only smit.calcAge() since the value of age is returned -- good practise -- it'll give age as output
+console.log(
+  `${smit.firstName} is a ${smit.calcAge()}-year old ${smit.job} and he ${
+    smit.hasDriversLicense ? 'has' : `doesn't have`
+  } a drivers license !!`
+);
+
+//! Using this i.e getSummary function
+console.log('USING THIS:', smit.getSummary());
+
+//Arrays ar also special kind of objects so they can also have built in methods/functions like push,pop,etc to manipulate them
+//Here in objects we created our own methods on our own objects
+
+// Assignment 9 ✅
+const myCountry1 = {
+  country: 'India',
+  capital: 'Delhi',
+  language: 'Hindi',
+  population: '1395',
+  neighbours, //neighbours: neighbours,
+  describe: function () {
+    return `${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}`;
+  },
+  checkIsIsland: function () {
+    //this.isIsland = this.neighbours.length === 0 ? true : false;
+    //! even simpler - IMPORTANT
+    this.isIsland = !Boolean(this.neighbours.length);
+
+    return this.isIsland;
+  },
+};
+console.log(myCountry1.describe());
+console.log('isIsland :', myCountry1.checkIsIsland());
+console.log(myCountry1);
+/*
+{country: "India", capital: "Delhi", language: "Hindi", population: "1395", 
+neighbours:(5) ["Republic of Sweden", "Germany", "France", "Iceland", "Italy"], isIsland: false}
+*/
