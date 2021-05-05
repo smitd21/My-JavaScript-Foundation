@@ -858,3 +858,25 @@ if (mark.bmi > john.bmi) {
   );
 }
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+/*
+* Iteration - The for Loop
+console.log(`Lifting weights repitition 1 🏋🏼‍♂️`);
+console.log(`Lifting weights repitition 2 🏋🏼‍♂️`);
+console.log(`Lifting weights repitition 3 🏋🏼‍♂️`);
+console.log(`Lifting weights repitition 4 🏋🏼‍♂️`);
+console.log(`Lifting weights repitition 5 🏋🏼‍♂️`);
+console.log(`Lifting weights repitition 6 🏋🏼‍♂️`);
+console.log(`Lifting weights repitition 7 🏋🏼‍♂️`);
+console.log(`Lifting weights repitition 8 🏋🏼‍♂️`);
+console.log(`Lifting weights repitition 9 🏋🏼‍♂️`);
+console.log(`Lifting weights repitition 10 🏋🏼‍♂️`);
+! Violating Repitition of Code principal
+That is why we use Loops
+*/
+//* for(initializaion;condition;increment/decrement)
+
+for (let rep = 1; rep <= 10; rep++) {
+  console.log(`Lifting weights repitition ${rep} 🏋🏼‍♂️`);
+}
+//It'll print 10 times from 1 to 10
