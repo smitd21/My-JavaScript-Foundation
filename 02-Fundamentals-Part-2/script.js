@@ -820,3 +820,41 @@ console.log(myCountry1);
 {country: "India", capital: "Delhi", language: "Hindi", population: "1395", 
 neighbours:(5) ["Republic of Sweden", "Germany", "France", "Iceland", "Italy"], isIsland: false}
 */
+
+//Coding Challenge #3 ✅
+const mark = {
+  firstName: 'Mark',
+  lastName: 'Smith',
+  mass: 78,
+  height: 1.69,
+  calcBmi: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  },
+};
+const john = {
+  firstName: 'John',
+  lastName: 'Miller',
+  mass: 92,
+  height: 1.95,
+  calcBmi: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  },
+};
+console.log(`Mark's BMI :`, mark.calcBmi()); //! Called
+console.log(`John's BMI :`, john.calcBmi()); //! Called
+//! Now this.bmi property is added once calcBmi is called either use calcBMI() everywhere since it is returned or directly use mark.bmi/john.bmi like below
+// So no violation of REPEATING CODES
+console.log(`Mark's BMI :`, mark.bmi);
+console.log(`John's BMI :`, john.bmi);
+if (mark.bmi > john.bmi) {
+  console.log(
+    `${mark.firstName} ${mark.lastName}'s BMI (${mark.bmi}) is higher than ${john.firstName} ${john.lastName} BMI (${john.bmi}) `
+  );
+} else if (john.bmi > mark.bmi) {
+  console.log(
+    `${john.firstName} ${john.lastName}'s BMI (${john.bmi}) is higher than ${mark.firstName} ${mark.lastName} BMI (${mark.bmi}) `
+  );
+}
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
