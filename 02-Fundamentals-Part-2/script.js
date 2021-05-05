@@ -794,29 +794,3 @@ console.log('USING THIS:', smit.getSummary());
 
 //Arrays ar also special kind of objects so they can also have built in methods/functions like push,pop,etc to manipulate them
 //Here in objects we created our own methods on our own objects
-
-// Assignment 9 ✅
-const myCountry1 = {
-  country: 'India',
-  capital: 'Delhi',
-  language: 'Hindi',
-  population: '1395',
-  neighbours, //neighbours: neighbours,
-  describe: function () {
-    return `${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}`;
-  },
-  checkIsIsland: function () {
-    //this.isIsland = this.neighbours.length === 0 ? true : false;
-    //! even simpler - IMPORTANT
-    this.isIsland = !Boolean(this.neighbours.length);
-
-    return this.isIsland;
-  },
-};
-console.log(myCountry1.describe());
-console.log('isIsland :', myCountry1.checkIsIsland());
-console.log(myCountry1);
-/*
-{country: "India", capital: "Delhi", language: "Hindi", population: "1395", 
-neighbours:(5) ["Republic of Sweden", "Germany", "France", "Iceland", "Italy"], isIsland: false}
-*/
