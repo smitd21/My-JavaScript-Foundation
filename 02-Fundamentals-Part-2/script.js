@@ -880,3 +880,14 @@ for (let rep = 1; rep <= 10; rep++) {
   console.log(`Lifting weights repitition ${rep} 🏋🏼‍♂️`);
 }
 //It'll print 10 times from 1 to 10
+
+// Assignment 10 ✅
+for (let v = 1; v <= 50; v++) {
+  console.log(
+    `Voter number ${v} is currently voting ${
+      v <= 49
+        ? `get ready ${v + 1} you're next up!`
+        : 'And then the voting ends :))'
+    }`
+  );
+}
