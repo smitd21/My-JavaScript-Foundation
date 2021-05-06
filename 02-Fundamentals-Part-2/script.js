@@ -966,3 +966,47 @@ for (let i = 0; i < smitLoop1.length; i++) {
   console.log(smitLoop1[i], typeof smitLoop1[i]);
 }
 //! Number aaya toh break i.e execute the entire code
+
+// Assignment 11 ✅
+
+/*
+From Assignment 5 ✅
+const populations = [1441, 1409, 97, 67, 1015];
+console.log(populations);
+const percentages = [];
+
+const percentageOfWorlds = (population) => {
+  const worldPopulation = 7900;
+  const percentage = (population / worldPopulation) * 100;
+  return percentage;
+};
+const per1 = percentageOfWorlds(populations[populations.length - 5]); //0
+const per2 = percentageOfWorlds(populations[1]);
+const per3 = percentageOfWorlds(populations[populations.length - 3]); //2
+const per4 = percentageOfWorlds(populations[3]);
+const per5 = percentageOfWorlds(populations[populations.length - 1]); //4
+
+percentages.push(per1, per2, per3, per4, per5);
+console.log(percentages);
+(5) [18.240506329113924, 17.83544303797468, 1.2278481012658227, 0.8481012658227849, 12.848101265822784]
+
+
+Use a for loop to compute an array called 'percentages2' containing the
+percentages of the world population for the 4 population values. Use the
+function 'percentageOfWorld1' that you created earlier
+Confirm that 'percentages2' contains exactly the same values as the
+'percentages' array that we created manually in the previous assignment,
+and reflect on how much better this solution is
+
+*/
+
+const percentages2 = [];
+for (let i = 0; i < populations.length; i++) {
+  percentages2.push(percentageOfWorlds(populations[i]));
+}
+console.log(percentages2);
+console.log(`---Comparing ---`);
+for (let i = 0; i < percentages2.length; i++) {
+  if (percentages2[i] !== percentages[i]) break;
+  console.log(percentages2[i], percentages[i]);
+}
