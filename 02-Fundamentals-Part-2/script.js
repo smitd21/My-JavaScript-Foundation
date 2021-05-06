@@ -891,3 +891,78 @@ for (let v = 1; v <= 50; v++) {
     }`
   );
 }
+
+//* Looping Arrays, Breaking and Continuing
+const smitLoop = ['Smit', 'Desai', 2021 - 2000, 'web developer', friends, true];
+
+const typesArray = [];
+
+/*
+* To access each element of this array we do:
+console.log(smitLoop[0])
+console.log(smitLoop[1])
+console.log(smitLoop[2])
+console.log(smitLoop[3])
+console.log(smitLoop[4])
+*/
+for (let i = 0; i < smitLoop.length; i++) {
+  //Reading from smitLoop array
+  console.log(`Element no. ${i} :`, smitLoop[i], typeof smitLoop[i]);
+
+  //* Filling the types array
+  //typesArray[i] = typeof smitLoop[i];
+  // using push
+  typesArray.push(typeof smitLoop[i]);
+}
+console.log(typesArray);
+/*
+Element no. 0 : Smit
+Element no. 1 : Desai
+Element no. 2 : 21
+Element no. 3 : web developer
+Element no. 4 : (7) ["Guru", "Neel", "Parth", "Akshil", "Bhavya", "Shiven", 23]
+*/
+
+//Practise
+const yearsArray = [1991, 2007, 1969, 2020];
+const ageArray = [];
+for (let i = 0; i < yearsArray.length; i++) {
+  console.log(`Years :`, yearsArray[i]);
+
+  //ageArray[i] = 2021 - yearsArray[i];
+  // using push
+  ageArray.push(2021 - yearsArray[i]);
+  //! What we are doing here is adding the element to ageArray individual by subtracting it by 2021 one by one in iterations
+}
+console.log('Age of the array items: ', ageArray);
+
+/*
+Continue and break
+! continue : exit the current iteration of the loop and continue to the next one
+! break : completely terminate the whole loop
+*/
+const smitLoop1 = [
+  'Smit',
+  'Desai',
+  2021 - 2000,
+  'web developer',
+  friends,
+  true,
+];
+console.log(smitLoop1);
+// typesArray of smitLoop1 = (6) ["string", "string", "number", "string", "object", "boolean"]
+
+//Log only the string type elements everytime
+console.log(`---ONLY STRING---`);
+for (let i = 0; i < smitLoop1.length; i++) {
+  if (typeof smitLoop1[i] !== 'string') continue; //exit current iteration immediately if not a string
+  console.log(smitLoop1[i], typeof smitLoop1[i]);
+}
+
+//Keep Logging until you found a number
+console.log('---BREAK WITH NUMBER---');
+for (let i = 0; i < smitLoop1.length; i++) {
+  if (typeof smitLoop[i] === 'number') break; //Terminate entire code if you find a number or else keep logging
+  console.log(smitLoop1[i], typeof smitLoop1[i]);
+}
+//! Number aaya toh break i.e execute the entire code
