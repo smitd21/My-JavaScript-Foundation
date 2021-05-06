@@ -960,7 +960,7 @@ for (let i = 0; i < smitLoop1.length; i++) {
 }
 
 //Keep Logging until you found a number
-console.log('---BREAK WITH NUMBER---');
+console.log('----BREAK WITH NUMBER----');
 for (let i = 0; i < smitLoop1.length; i++) {
   if (typeof smitLoop[i] === 'number') break; //Terminate entire code if you find a number or else keep logging
   console.log(smitLoop1[i], typeof smitLoop1[i]);
