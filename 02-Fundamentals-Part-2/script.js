@@ -1010,3 +1010,60 @@ for (let i = 0; i < percentages2.length; i++) {
   if (percentages2[i] !== percentages[i]) break;
   console.log(percentages2[i], percentages[i]);
 }
+
+//* Looping Backwards and Loops in Loops
+
+//Looping Backwards
+const smitLoop2 = [
+  'Smit',
+  'Desai',
+  2021 - 2000,
+  'web developer',
+  friends,
+  true,
+];
+for (let i = smitLoop2.length - 1; i >= 0; i--) {
+  console.log(`Element no. ${i} :`, smitLoop2[i], typeof smitLoop2[i]);
+}
+/*
+Element no. 5 : true boolean
+Element no. 4 : (7) ["Guru", "Neel", "Parth", "Akshil", "Bhavya", "Shiven", 23] object
+Element no. 3 : web developer string
+Element no. 2 : 21 number
+Element no. 1 : Desai string
+Element no. 0 : Smit string
+*/
+
+//Loops in Loops
+for (let exercise = 0; exercise < 4; exercise++) {
+  console.log(`========== Starting exercise Day ${exercise}`);
+  for (let rep = 1; rep < 6; rep++) {
+    console.log(`Exercise Day ${exercise} : Lifting weights repitition ${rep}`);
+  }
+}
+/*
+========== Starting exercise Day 0
+ Exercise Day 0 : Lifting weights repitition 1
+ Exercise Day 0 : Lifting weights repitition 2
+ Exercise Day 0 : Lifting weights repitition 3
+ Exercise Day 0 : Lifting weights repitition 4
+ Exercise Day 0 : Lifting weights repitition 5
+========== Starting exercise Day 1
+ Exercise Day 1 : Lifting weights repitition 1
+ Exercise Day 1 : Lifting weights repitition 2
+ Exercise Day 1 : Lifting weights repitition 3
+ Exercise Day 1 : Lifting weights repitition 4
+ Exercise Day 1 : Lifting weights repitition 5
+========== Starting exercise Day 2
+ Exercise Day 2 : Lifting weights repitition 1
+ Exercise Day 2 : Lifting weights repitition 2
+ Exercise Day 2 : Lifting weights repitition 3
+ Exercise Day 2 : Lifting weights repitition 4
+ Exercise Day 2 : Lifting weights repitition 5
+========== Starting exercise Day 3
+ Exercise Day 3 : Lifting weights repitition 1
+ Exercise Day 3 : Lifting weights repitition 2
+ Exercise Day 3 : Lifting weights repitition 3
+ Exercise Day 3 : Lifting weights repitition 4
+ Exercise Day 3 : Lifting weights repitition 5
+ */
