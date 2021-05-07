@@ -1067,3 +1067,19 @@ for (let exercise = 0; exercise < 4; exercise++) {
  Exercise Day 3 : Lifting weights repitition 4
  Exercise Day 3 : Lifting weights repitition 5
  */
+
+// Assignment 12 ✅
+
+//! IMPORTANT
+const listOfNeighbours = [
+  [['Canada', 'Mexico'], ['Spain'], ['Norway', 'Sweden', 'Russia']],
+];
+//* Desired Output
+console.log(listOfNeighbours[0][0]); //Canada,Mexico
+console.log(listOfNeighbours[0][1]); //Spain
+console.log(listOfNeighbours[0][2]); //Norway,Sweden,Russia
+for (let i = 0; i < listOfNeighbours.length; i++) {
+  for (let j = 0; j < listOfNeighbours[i].length; j++) {
+    console.log(`Neighbours: ${listOfNeighbours[i][j]}`);
+  }
+}
