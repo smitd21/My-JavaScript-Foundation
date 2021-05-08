@@ -1111,3 +1111,12 @@ while (dice !== 6) {
   dice = Math.trunc(Math.random() * 6) + 1; //*Keep creating new dice values or else browser ill crash
 }
 if (dice === 6) console.log(`Wuhuuu you got a ${dice} :)))`);
+
+//Assignment 13 ✅
+const percentages3 = [];
+let i = 0;
+while (i < populations.length) {
+  percentages3.push(percentageOfWorlds(populations[i]));
+  i++;
+}
+console.log(percentages3);
