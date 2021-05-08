@@ -1,3 +1,4 @@
+//* JavaScript Basics 101
 //JavaScript Fundamentals – Part 1
 let user = 'Smit';
 //if (user === 'Smit') alert('Welcome to the Fight Club!!!');
