@@ -1120,3 +1120,22 @@ while (i < populations.length) {
   i++;
 }
 console.log(percentages3);
+
+//Coding Challenge #4 ✅
+
+const billV = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tip = [];
+const totallBill = [];
+
+const calcProTip = (bill) => {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+};
+for (let i = 0; i < billV.length; i++) {
+  tip.push(calcProTip(billV[i]));
+  totallBill.push(billV[i] + tip[i]);
+}
+console.log(billV, tip, totallBill);
+
+const calcAvgg = (arr) => {
+  for (let i = 0; i < totallBill.length; i++) {}
+};
