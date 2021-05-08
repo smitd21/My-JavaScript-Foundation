@@ -1083,3 +1083,31 @@ for (let i = 0; i < listOfNeighbours.length; i++) {
     console.log(`Neighbours: ${listOfNeighbours[i][j]}`);
   }
 }
+
+//* The While Loop
+// for (let rep = 1; rep <= 10; rep++) {
+//   console.log(`Lifting weights repition ${rep}`);
+// }
+
+let rep = 1;
+while (rep <= 10) {
+  console.log(`Lifting weights repition ${rep}`);
+  rep++;
+}
+
+//! The While loop really needs is the condition which needs to stay true for it to keep running.
+//No Need of any counter          (above we used coz of the use case)
+//Therefore most of the time we need is a while loop i.e without any counter so without a number that is increasing
+
+/* IMPORTANT
+! Without a counter or whenever you don't know beforehand how many iterations the loop will/can have => use While loop
+! For an array we use 'for' coz we know how many iterations it can have i.e the array.lenth righttt
+*/
+
+let dice = Math.trunc(Math.random() * 6) + 1; //Or Math.trunc(Math.random() * 6)+1
+while (dice !== 6) {
+  //Only if not a 6
+  console.log(`You rolled a ${dice} Try Again :((`);
+  dice = Math.trunc(Math.random() * 6) + 1; //*Keep creating new dice values or else browser ill crash
+}
+if (dice === 6) console.log(`Wuhuuu you got a ${dice} :)))`);
