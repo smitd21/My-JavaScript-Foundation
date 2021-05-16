@@ -749,4 +749,4 @@ console.log(
   `Your bill was : ${bill}, the tip was ${tip} so the total is ${bill + tip}`
 );
 
-//THE END of JavaScript Fundamentals - Part 1\\
+//THE END of JavaScript Fundamentals - Part 1 ✅\\
