@@ -146,7 +146,7 @@ console.log(percentageOfWorld1('UK', 67));
 const percentageOfWorld2 = function (country, population) {
   const worldPopulation = 7900;
   const percentage = (population / worldPopulation) * 100;
-  return `${country} has {population} people, so it's about ${percentage} of the world population.`;
+  return `${country} has ${population} people, so it's about ${percentage} of the world population.`;
 };
 console.log(percentageOfWorld2('China', 1441));
 console.log(percentageOfWorld2('India', 1409));
@@ -159,9 +159,9 @@ const percentageOfWorld3 = (country, population) => {
   const percentage = (population / worldPopulation) * 100;
   return `${country} has ${population} million people, so it's about ${percentage} of the world population`;
 };
-console.log(percentageOfWorld2('China', 1441));
-console.log(percentageOfWorld2('India', 1409));
-console.log(percentageOfWorld2('UK', 67));
+console.log(percentageOfWorld3('China', 1441));
+console.log(percentageOfWorld3('India', 1409));
+console.log(percentageOfWorld3('UK', 67));
 
 //-----------------------------------------------------------------------
 
@@ -814,7 +814,8 @@ const myCountry1 = {
   },
 };
 console.log(myCountry1.describe());
-console.log('isIsland :', myCountry1.checkIsIsland());
+console.log('isIsland :', myCountry1.checkIsIsland()); //Called and it'll also give you the value true(since not an island)
+console.log('isIsland :', myCountry1.isIsland); //now u can use directly myCountry1.isIsland since the function checkIsIsland is called above
 console.log(myCountry1);
 /*
 {country: "India", capital: "Delhi", language: "Hindi", population: "1395", 
@@ -846,8 +847,8 @@ console.log(`Mark's BMI :`, mark.calcBmi()); //! Called
 console.log(`John's BMI :`, john.calcBmi()); //! Called
 //! Now this.bmi property is added once calcBmi is called either use calcBMI() everywhere since it is returned or directly use mark.bmi/john.bmi like below
 // So no violation of REPEATING CODES
-console.log(`Mark's BMI :`, mark.bmi);
-console.log(`John's BMI :`, john.bmi);
+console.log(`Mark's BMI :`, mark.bmi); //! Used
+console.log(`John's BMI :`, john.bmi); //! Used
 if (mark.bmi > john.bmi) {
   console.log(
     `${mark.firstName} ${mark.lastName}'s BMI (${mark.bmi}) is higher than ${john.firstName} ${john.lastName} BMI (${john.bmi}) `
@@ -1125,17 +1126,12 @@ console.log(percentages3);
 
 const billV = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
 const tip = [];
-const totallBill = [];
-
+const totalBills = [];
 const calcProTip = (bill) => {
   return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 };
 for (let i = 0; i < billV.length; i++) {
   tip.push(calcProTip(billV[i]));
-  totallBill.push(billV[i] + tip[i]);
+  totalBills.push(tip[i] + billV[i]);
+  console.log(`Bill Number ${i} : ${billV[i]} + ${tip[i]} = ${totalBills[i]}`);
 }
-console.log(billV, tip, totallBill);
-
-const calcAvgg = (arr) => {
-  for (let i = 0; i < totallBill.length; i++) {}
-};

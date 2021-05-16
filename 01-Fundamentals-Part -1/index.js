@@ -84,7 +84,7 @@ variable simply stores value that have a type
 //Assignment 2 ✅
 let isIsland;
 let language;
-console.log(typeof isIsland); //boolean
+console.log(typeof isIsland); //undefined
 console.log(typeof language); //undefined
 //*redefining your lets
 isIsland = 'Maldives';
@@ -482,8 +482,8 @@ if (age === 18) console.log('You just became an adult(strict) ;))'); //false
 if (age == 18) console.log('You just became an adult(loose) ;))'); //true
 
 /*
-//const secretKey = prompt('Enter Secret Key');  // Prompt will take everything be default a STRING
-//so first convert it into number
+const secretKey = prompt('Enter Secret Key');  // Prompt will take everything be default a STRING
+so first convert it into number
 const secretKey = Number(prompt('Enter Secret Key'));
 if (secretKey === 2107) {
   alert('You are Welcome Smit Sir !!');
