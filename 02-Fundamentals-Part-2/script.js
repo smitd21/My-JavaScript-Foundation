@@ -1135,3 +1135,17 @@ for (let i = 0; i < billV.length; i++) {
   totalBills.push(tip[i] + billV[i]);
   console.log(`Bill Number ${i} : ${billV[i]} + ${tip[i]} = ${totalBills[i]}`);
 }
+
+const letsCalcAvg = (arr) => {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    //sum = sum +arr[i];
+    sum += arr[i];
+  }
+  return sum / arr.length; //return the average
+};
+console.log(letsCalcAvg([2, 3, 4])); //3
+console.log(`Average Tips given : ${letsCalcAvg(tip)}`); //42.89
+console.log(`Average Bill of Hotel : ${letsCalcAvg(totalBills)}`); //275.19
+
+//THE END of JavaScript Fundamentals - Part 2 ✅\\
