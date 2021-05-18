@@ -26,7 +26,7 @@ As we want out data somewhere in code and not just in DOM - Code bhi kch krna ch
 const secretNumber = Math.trunc(Math.random() * 20) + 1; // + 1 for including 20 & trunc to remove decimal
 let score = 20;
 
-document.querySelector('.number').textContent = secretNumber; //changed the class ka text whatever it is
+//document.querySelector('.number').textContent = secretNumber; //changed the class ka text whatever it is
 
 //* Important - addEventListener(event, whatToDo - A function)
 //! Here We just have to define the function and not call it right?
@@ -47,6 +47,8 @@ document.querySelector('.check').addEventListener('click', () => {
   //When the player wins
   else if (guess === secretNumber) {
     document.querySelector('.message').textContent = '🎉 Correct Number!';
+    //Also display the correct secret number
+    document.querySelector('.number').textContent = secretNumber;
 
     //! Class/id/body,etc as well as the property all should be STRING
     //* While changing the css use the style. property and further the CSS property should be camelCased and the value always need to be a string
