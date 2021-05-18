@@ -27,6 +27,10 @@ let secretNumber = Math.trunc(Math.random() * 20) + 1; // + 1 for including 20 &
 let score = 20;
 let highScore = 0;
 
+const displayMessage = message => {
+  document.querySelector('.message').textContent = message;
+}; // To follow the DRY (donotrepeatyourself) Principle as this was repeating again and again so we use it in a function and just pass the message when u call it
+
 //document.querySelector('.number').textContent = secretNumber; //changed the class ka text whatever it is
 
 //* Important - addEventListener(event, whatToDo - A function)
@@ -43,11 +47,14 @@ document.querySelector('.check').addEventListener('click', () => {
   //No input
   if (!guess) {
     //Falsy  - When no input (Falsy Values: "",undef,nan,null,0)
-    document.querySelector('.message').textContent = '⛔ No Number!';
+    //document.querySelector('.message').textContent = '⛔ No Number!';
+    //* Using the function displayMessage
+    displayMessage('⛔ No Number!');
   }
   //When the player wins
   else if (guess === secretNumber) {
-    document.querySelector('.message').textContent = '🎉 Correct Number!';
+    //document.querySelector('.message').textContent = '🎉 Correct Number!';
+    displayMessage('🎉 Correct Number!');
     //Also display the correct secret number
     document.querySelector('.number').textContent = secretNumber;
 
@@ -62,27 +69,24 @@ document.querySelector('.check').addEventListener('click', () => {
       document.querySelector('.highscore').textContent = highScore;
     }
   }
-  //Guesses Wrongg  -> (Show High or low) Also ->(decrease the Score by 1)
-  else if (guess > secretNumber) {
+  // When guess is wrong -> (Show High or low) Also ->(decrease the Score by 1)
+  else if (guess !== secretNumber) {
     if (score > 1) {
       //Score>1 --> Then only still playing the game and score is decrementing
-      document.querySelector('.message').textContent = '📈 Too high!';
+
+      //   document.querySelector('.message').textContent =
+      //     guess > secretNumber ? '📈 Too high!' : '📉 Too low!';
+
+      displayMessage(
+        (document.querySelector('.message').textContent =
+          guess > secretNumber ? '📈 Too high!' : '📉 Too low!')
+      ); //! Your guess>secretNumber show Too high guess<secretNumber sho Too Low)
       score--;
       document.querySelector('.score').textContent = score;
     } else {
       //Score<1 --> SHOW Lost game & Score = 0 - The End
-      document.querySelector('.message').textContent = '💥 You lost the game!';
-      document.querySelector('.score').textContent = 0;
-    }
-  } else if (guess < secretNumber) {
-    if (score > 1) {
-      //Score>1 --> Then only still playing the game and score is decrementing
-      document.querySelector('.message').textContent = '📉 Too low!';
-      score--;
-      document.querySelector('.score').textContent = score;
-    } else {
-      //Score<1 --> SHOW Lost game & Score = 0 - The End
-      document.querySelector('.message').textContent = '💥 You lost the game!';
+      //document.querySelector('.message').textContent = '💥 You lost the game!';
+      displayMessage('💥 You lost the game!');
       document.querySelector('.score').textContent = 0;
     }
   }
@@ -93,7 +97,8 @@ document.querySelector('.again').addEventListener('click', () => {
   console.log('RESET GAME');
   score = 20; // The Total score which is handled by code and not DOM
   secretNumber = Math.trunc(Math.random() * 20) + 1; // To again generate the next Value to be guessed
-  document.querySelector('.message').textContent = 'Start guessing...';
+  //document.querySelector('.message').textContent = 'Start guessing...';
+  displayMessage('Start guessing...');
   document.querySelector('.number').textContent = '?';
   document.querySelector('.guess').value = ''; // Input therefore value and is always a string so it initalisez with empty string
 
