@@ -23,8 +23,9 @@ Keeping these below data and trigger itself in the code not in DOM
 Called as State Data
 As we want out data somewhere in code and not just in DOM - Code bhi kch krna chahiye naa not just all DOM work
 */
-const secretNumber = Math.trunc(Math.random() * 20) + 1; // + 1 for including 20 & trunc to remove decimal
+let secretNumber = Math.trunc(Math.random() * 20) + 1; // + 1 for including 20 & trunc to remove decimal
 let score = 20;
+let highScore = 0;
 
 //document.querySelector('.number').textContent = secretNumber; //changed the class ka text whatever it is
 
@@ -36,7 +37,7 @@ document.querySelector('.check').addEventListener('click', () => {
   //console.log(guess, typeof guess); // 21 (in white) string //! Usually whever we get something from the user interface, for example an input field, a prompt -- IT USUALLY ALWAYS IS A STRING
 
   //SO CONVERT TO A NUMBER FIRST
-  const guess = Number(document.querySelector('.guess').value);
+  let guess = Number(document.querySelector('.guess').value);
   console.log(guess, typeof guess); // 21 (in purple) "number"
 
   //No input
@@ -54,6 +55,12 @@ document.querySelector('.check').addEventListener('click', () => {
     //* While changing the css use the style. property and further the CSS property should be camelCased and the value always need to be a string
     document.querySelector('body').style.backgroundColor = '#60b347';
     document.querySelector('.number').style.width = '30rem';
+
+    /// Setting the highScore
+    if (score > highScore) {
+      highScore = score;
+      document.querySelector('.highscore').textContent = highScore;
+    }
   }
   //Guesses Wrongg  -> (Show High or low) Also ->(decrease the Score by 1)
   else if (guess > secretNumber) {
@@ -79,4 +86,18 @@ document.querySelector('.check').addEventListener('click', () => {
       document.querySelector('.score').textContent = 0;
     }
   }
+});
+
+//! Again -> RESET GAME
+document.querySelector('.again').addEventListener('click', () => {
+  console.log('RESET GAME');
+  score = 20; // The Total score which is handled by code and not DOM
+  secretNumber = Math.trunc(Math.random() * 20) + 1; // To again generate the next Value to be guessed
+  document.querySelector('.message').textContent = 'Start guessing...';
+  document.querySelector('.number').textContent = '?';
+  document.querySelector('.guess').value = ''; // Input therefore value and is always a string so it initalisez with empty string
+
+  document.querySelector('.score').textContent = score;
+  document.querySelector('body').style.backgroundColor = '#222';
+  document.querySelector('.number').style.width = '15rem';
 });
