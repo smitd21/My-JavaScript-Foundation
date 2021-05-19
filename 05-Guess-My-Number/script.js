@@ -56,12 +56,12 @@ document.querySelector('.check').addEventListener('click', () => {
     //document.querySelector('.message').textContent = '🎉 Correct Number!';
     displayMessage('🎉 Correct Number!');
     //Also display the correct secret number
-    document.querySelector('.number').textContent = secretNumber;
+    document.querySelector('.number').textContent = secretNumber; //middle box
 
     //! Class/id/body,etc as well as the property all should be STRING
     //* While changing the css use the style. property and further the CSS property should be camelCased and the value always need to be a string
     document.querySelector('body').style.backgroundColor = '#60b347';
-    document.querySelector('.number').style.width = '30rem';
+    document.querySelector('.number').style.width = '30rem'; //middle box
 
     /// Setting the highScore
     if (score > highScore) {
@@ -72,15 +72,12 @@ document.querySelector('.check').addEventListener('click', () => {
   // When guess is wrong -> (Show High or low) Also ->(decrease the Score by 1)
   else if (guess !== secretNumber) {
     if (score > 1) {
-      //Score>1 --> Then only still playing the game and score is decrementing
+      // Score>1 -->  STILL PLAYING  the game and score is decrementing
 
       //   document.querySelector('.message').textContent =
       //     guess > secretNumber ? '📈 Too high!' : '📉 Too low!';
 
-      displayMessage(
-        (document.querySelector('.message').textContent =
-          guess > secretNumber ? '📈 Too high!' : '📉 Too low!')
-      ); //! Your guess>secretNumber show Too high guess<secretNumber sho Too Low)
+      displayMessage(guess > secretNumber ? '📈 Too high!' : '📉 Too low!'); //! Your guess>secretNumber show Too high guess<secretNumber sho Too Low)
       score--;
       document.querySelector('.score').textContent = score;
     } else {
