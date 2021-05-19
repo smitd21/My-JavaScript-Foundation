@@ -77,10 +77,7 @@ document.querySelector('.check').addEventListener('click', () => {
       //   document.querySelector('.message').textContent =
       //     guess > secretNumber ? '📈 Too high!' : '📉 Too low!';
 
-      displayMessage(
-        (document.querySelector('.message').textContent =
-          guess > secretNumber ? '📈 Too high!' : '📉 Too low!')
-      ); //! Your guess>secretNumber show Too high guess<secretNumber sho Too Low)
+      displayMessage(guess > secretNumber ? '📈 Too high!' : '📉 Too low!'); //! Your guess>secretNumber show Too high guess<secretNumber sho Too Low)
       score--;
       document.querySelector('.score').textContent = score;
     } else {
