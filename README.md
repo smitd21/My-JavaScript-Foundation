@@ -2,6 +2,7 @@
 
 Here I'll be practising JavaScript right from basics to expertise
 
+- [Guess My Number Game](https://js-guess-my-number.netlify.app/) (DOM Manipulation)
 - [Pig Game](https://pig-game-v2.netlify.app) (DOM Manipulation)
 - [Bankist](https://bankist.netlify.app/) (Arrays, Numbers, Dates, Timers. Fake "log in" with user `js` and PIN `1111`)
 - [Bankist Site](https://bankist-dom.netlify.app/) (Advanced DOM and Events)
