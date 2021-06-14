@@ -396,7 +396,7 @@ console.log('23' - '10' - 3); //10 -  Number
 //as - will convert it into number automatically
 
 console.log('23' + '10' - 3); //2307 - Number
-console.log('23' + '10' + 3); //2313 - String
+console.log('23' + '10' + 3); //23103 - String
 //*+ therefore no conversion - it'll concat
 
 console.log('100' + '70'); //10070 - String
@@ -560,7 +560,7 @@ if (dolphinAvgScore > koalasAvgScore && dolphinAvgScore >= 100) {
     'No results due to SAME low average scores of both the teams !!!'
   );
 } else if (dolphinAvgScore < 100 && koalasAvgScore < 100) {
-  console.log(`Dolphin's: ${dolphinAvgScore} = Koala's : ${koalasAvgScore}`);
+  console.log(`Dolphin's: ${dolphinAvgScore}, Koala's : ${koalasAvgScore}`);
   console.log('No results due to low average scores of both the teams !!!');
 }
 
