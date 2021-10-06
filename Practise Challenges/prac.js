@@ -36,10 +36,21 @@ let country = 'India';
 let continent = 'Asia';
 let population = 1300;
 let isIsland = false;
-
+let language;
 console.log(
   `${country} from ${continent} has population of ${population} million!!`
 );
+if (!isIsland) {
+  console.log(`${country} is not an island ;)`);
+} else {
+  console.log(`${country} is an island`);
+}
+language = 'Hindi';
+if (language) {
+  console.log(`${country}ns speak ${language} language!`);
+} else {
+  console.log(`Language is ${language} sorry please define it :(`);
+}
 
 console.log(
   typeof country, //string
@@ -59,10 +70,13 @@ console.log(typeof NaN); // Number - Still a number but an invalid number
 console.log(42 / 0); //Infinity
 console.log(42 / -0); //-Infinity
 console.log(42 / 0, 112 / -0); //Infinity, -Infinity
-console.log(typeof 42 / 0, typeof 112 / -0); // number, number
+console.log(typeof 42 / 0, typeof 112 / -0); // NaN, NaN
+console.log(typeof 42 / 0); //NaN
+console.log(typeof 42 / -0); // NaN
 
-console.log(typeof (Infinity, -Infinity)); //number
+// BUT
 console.log(typeof (42 / 0, 42 / -0)); //number
+console.log(typeof (Infinity, -Infinity)); //number
 
 //! MY PRACTISE REVISION AREA  ENDS HERE !!!
 
