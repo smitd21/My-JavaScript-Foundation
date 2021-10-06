@@ -1,7 +1,75 @@
 'use strict';
-// Coding Challenge 1&2 ✅
-console.log(`Hey let's practise!!`);
 
+//! MY PRACTISE REVISION AREA  !!!
+
+/*
+variable = value -> value is the smallest unit
+variable  - BOX to store a value
+
+* Naming Convention
+1. Can only have letters, numbers, underscore '_' & $ sign
+2. Shouldn't start with a number
+3. Shouldn't have any special characters other than $ and _
+
+4. Shouldn't be a reserved or future reserved keyword
+eg: const Function ❌ const if ❌ const new❌ const name (no error here but please avoid using name) ❌ 
+
+5. Avoid starting with a capital letter they are classes that start with caps 
+and also all uppercase letters are reserved constants eg: const PI 
+* Stick with camelCase Convention
+
+6. Variable names should be descriptive - makes code cleaner and understandable !!
+*/
+
+let js = 'amazing';
+if (js === 'amazing') console.log(`Wuhuuu !!! JS is ${js} !!`);
+
+let firstName = 'Smit';
+let lastName = 'Desai';
+let age = 21;
+
+console.log(firstName + ' ' + lastName + ' is ' + age + ' years old!!');
+//Using Template literals
+console.log(`${firstName} ${lastName} is ${age} years old !!`);
+
+let country = 'India';
+let continent = 'Asia';
+let population = 1300;
+let isIsland = false;
+
+console.log(
+  `${country} from ${continent} has population of ${population} million!!`
+);
+
+console.log(
+  typeof country, //string
+  typeof continent, //string
+  typeof population, //number
+  typeof isIsland //boolean
+);
+
+let years; //declared but not defined
+console.log(typeof years); //undefined
+console.log(typeof undefined); //undefined
+
+console.log(typeof null); //object
+console.log(typeof []); //object
+console.log(typeof {}); //object
+console.log(typeof NaN); // Number - Still a number but an invalid number
+console.log(42 / 0); //Infinity
+console.log(42 / -0); //-Infinity
+console.log(42 / 0, 112 / -0); //Infinity, -Infinity
+console.log(typeof 42 / 0, typeof 112 / -0); // number, number
+
+console.log(typeof (Infinity, -Infinity)); //number
+console.log(typeof (42 / 0, 42 / -0)); //number
+
+//! MY PRACTISE REVISION AREA  ENDS HERE !!!
+
+// Coding Challenge 1&2 ✅
+/*
+console.log(`Hey let's practise!!`);
+ 
 let markMass, markHeight, johnHeight, johnMass;
 markMass = 95;
 markHeight = 1.88;
@@ -56,3 +124,4 @@ if (dolphinsAvgScore > koalasAvgScore && dolphinsAvgScore >= 100) {
 ) {
   console.log(`NOBODY WINS DUE TO SAME LOW AVERAGE SCORE OF BOTH REAMS :((`);
 }
+*/
